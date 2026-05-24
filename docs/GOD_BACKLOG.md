@@ -6,8 +6,8 @@
 
 | Dono | Felipe |
 | :--- | :--- |
-| **Início** | _data_ |
-| **Término** | _data_ |
+| **Início** | 20-Maio-2026 |
+| **Término** | — |
 | **Stack** | Java + Maven + MariaDB + JDBC |
 | **Contexto** | Oficina de Integração de Software — Faculdade |
 
@@ -40,27 +40,27 @@ Use como seu diário de bordo pessoal.
 
 ### 0.1 Identificar o problema de negócio
 
-- [ ] **P0.1.1** — Entender a demanda: sistema para gerenciar operações de aviação comercial
-- [ ] **P0.1.2** — Identificar as dores: dados espalhados, sem centralização, sem interface
-- [ ] **P0.1.3** — Definir o público-alvo: administradores e atendentes de companhias aéreas
-- [ ] **P0.1.4** — Definir o contexto acadêmico: oficina de integração de software
+- [x] **P0.1.1** — Entender a demanda: sistema para gerenciar operações de aviação comercial
+- [x] **P0.1.2** — Identificar as dores: dados espalhados, sem centralização, sem interface
+- [x] **P0.1.3** — Definir o público-alvo: administradores e atendentes de companhias aéreas
+- [x] **P0.1.4** — Definir o contexto acadêmico: oficina de integração de software
 
 ### 0.2 Pesquisar o domínio (Aviação Comercial)
 
-- [ ] **P0.2.1** — Estudar entidades do domínio: aeronave, companhia aérea, aeroporto, passageiro, voo, reserva
-- [ ] **P0.2.2** — Compreender relacionamentos: cada aeronave pertence a uma cia, cada voo parte de um aeroporto, cada reserva vincula passageiro a voo
-- [ ] **P0.2.3** — Identificar regras de negócio elementares: assento único por voo, CNPJ válido, etc.
+- [x] **P0.2.1** — Estudar entidades do domínio: aeronave, companhia aérea, aeroporto, passageiro, voo, reserva
+- [x] **P0.2.2** — Compreender relacionamentos: cada aeronave pertence a uma cia, cada voo parte de um aeroporto, cada reserva vincula passageiro a voo
+- [x] **P0.2.3** — Identificar regras de negócio elementares: assento único por voo, CNPJ válido, etc.
 
 ### 0.3 Definir o propósito do sistema
 
-- [ ] **P0.3.1** — Redigir a visão do produto (1 parágrafo)
-- [ ] **P0.3.2** — Definir objetivos mensuráveis: cadastrar X entidades, consultar Y dados, gerar Z relatórios
-- [ ] **P0.3.3** — Documentar no `docs/guia_conceitual_sistema_aviacao.md`
+- [x] **P0.3.1** — Redigir a visão do produto (1 parágrafo)
+- [x] **P0.3.2** — Definir objetivos mensuráveis: cadastrar X entidades, consultar Y dados, gerar Z relatórios
+- [x] **P0.3.3** — Documentar em `docs/vision.md`
 
 ### 0.4 Registrar lições da Gênese
 
-- [ ] **P0.4.1** — O que você aprendeu sobre o domínio?
-- [ ] **P0.4.2** — Quais dúvidas levar para o professor?
+- [x] **P0.4.1** — O que você aprendeu sobre o domínio?
+- [x] **P0.4.2** — Quais dúvidas levar para o professor?
 
 ---
 
@@ -70,40 +70,40 @@ Use como seu diário de bordo pessoal.
 
 ### 1.1 Levantar requisitos
 
-- [ ] **P1.1.1** — Entrevistar o "cliente" (professor / orientador)
-- [ ] **P1.1.2** — Coletar requisitos funcionais (o que o sistema FAZ)
-- [ ] **P1.1.3** — Coletar requisitos não-funcionais (performance, portabilidade, usabilidade)
-- [ ] **P1.1.4** — Validar com o dump SQL existente (`docs/sistema_aviacao.sql`)
+- [x] **P1.1.1** — Entrevistar o "cliente" (professor / orientador)
+- [x] **P1.1.2** — Coletar requisitos funcionais (o que o sistema FAZ)
+- [x] **P1.1.3** — Coletar requisitos não-funcionais (performance, portabilidade, usabilidade)
+- [x] **P1.1.4** — Validar com o dump SQL existente (`docs/sistema_aviacao.sql`)
 
 ### 1.2 Mapear entidades do domínio
 
-- [ ] **P1.2.1** — Listar entidades: Aeronave, CiaAerea, AeronaveCia, Aeroporto, Passageiro, Voo, Reserva
-- [ ] **P1.2.2** — Identificar atributos de cada entidade (consultar SQL dump)
-- [ ] **P1.2.3** — Identificar chaves primárias e estrangeiras
-- [ ] **P1.2.4** — Classificar entidades: independentes vs dependentes
+- [x] **P1.2.1** — Listar entidades: Aeronave, CiaAerea, AeronaveCia, Aeroporto, Passageiro, Voo, Reserva
+- [x] **P1.2.2** — Identificar atributos de cada entidade (consultar SQL dump)
+- [x] **P1.2.3** — Identificar chaves primárias e estrangeiras
+- [x] **P1.2.4** — Classificar entidades: independentes vs dependentes
 
 **Entidades independentes:** Passageiro, Aeroporto, CiaAerea
 **Entidades dependentes:** Aeronave, AeronaveCia, Voo, Reserva
 
 ### 1.3 Modelar banco de dados (DER)
 
-- [ ] **P1.3.1** — Desenhar DER conceitual (papel ou draw.io)
-- [ ] **P1.3.2** — Desenhar DER lógico (tabelas, colunas, FKs)
-- [ ] **P1.3.3** — Verificar normalização (3FN)
-- [ ] **P1.3.4** — Comparar com o dump SQL existente
+- [x] **P1.3.1** — Desenhar DER conceitual (no `docs/technical-design.md`)
+- [x] **P1.3.2** — Desenhar DER lógico (tabelas, colunas, FKs)
+- [x] **P1.3.3** — Verificar normalização (3FN)
+- [x] **P1.3.4** — Comparar com o dump SQL existente
 
 ### 1.4 Criar / validar o script SQL
 
-- [ ] **P1.4.1** — Importar `sistema_aviacao.sql` no phpMyAdmin
-- [ ] **P1.4.2** — Verificar estrutura de todas as tabelas
-- [ ] **P1.4.3** — Verificar constraints (PK, FK, NOT NULL)
-- [ ] **P1.4.4** — Verificar dados seed (10 registros por tabela)
+- [x] **P1.4.1** — Importar `sistema_aviacao.sql` no phpMyAdmin
+- [x] **P1.4.2** — Verificar estrutura de todas as tabelas
+- [x] **P1.4.3** — Verificar constraints (PK, FK, NOT NULL)
+- [x] **P1.4.4** — Verificar dados seed (10 registros por tabela)
 
 ### 1.5 Registrar lições da Descoberta
 
-- [ ] **P1.5.1** — Quais requisitos ficaram claros?
-- [ ] **P1.5.2** — Quais ainda são dúvidas?
-- [ ] **P1.5.3** — O que muda no planejamento original?
+- [x] **P1.5.1** — Quais requisitos ficaram claros?
+- [x] **P1.5.2** — Quais ainda são dúvidas?
+- [x] **P1.5.3** — O que muda no planejamento original?
 
 ---
 
@@ -113,50 +113,50 @@ Use como seu diário de bordo pessoal.
 
 ### 2.1 Definir Roadmap
 
-- [ ] **P2.1.1** — Criar visão macro do projeto em sprints
-- [ ] **P2.1.2** — Definir marcos (milestones) de entrega
-- [ ] **P2.1.3** — Estimar duração de cada sprint
-- [ ] **P2.1.4** — Documentar em `docs/roadmap.md`
+- [x] **P2.1.1** — Criar visão macro do projeto em sprints
+- [x] **P2.1.2** — Definir marcos (milestones) de entrega
+- [x] **P2.1.3** — Estimar duração de cada sprint
+- [x] **P2.1.4** — Documentar em `docs/product-backlog.md` e `docs/vision.md`
 
 ### 2.2 Criar o Product Backlog
 
-- [ ] **P2.2.1** — Listar todas as funcionalidades desejadas (brain dump)
-- [ ] **P2.2.2** — Escrever User Stories (padrão: "Como um... eu quero... para que...")
-- [ ] **P2.2.3** — Definir critérios de aceite para cada US
-- [ ] **P2.2.4** — Estimar esforço relativo (Story Points ou T-shirt sizing: P/M/G)
+- [x] **P2.2.1** — Listar todas as funcionalidades desejadas (brain dump)
+- [x] **P2.2.2** — Escrever User Stories (padrão: "Como um... eu quero... para que...")
+- [x] **P2.2.3** — Definir critérios de aceite para cada US
+- [x] **P2.2.4** — Estimar esforço relativo (Story Points ou T-shirt sizing: P/M/G)
 
 ### 2.3 Priorizar (Técnica MoSCoW)
 
-- [ ] **P2.3.1** — Must have: CRUD Aeronave, CRUD Cia Aérea, CRUD Aeroporto, CRUD Passageiro, CRUD Voo, Reserva
-- [ ] **P2.3.2** — Should have: busca por ID, filtros, validação de dados
-- [ ] **P2.3.3** — Could have: relatórios, histórico de reservas por passageiro
-- [ ] **P2.3.4** — Won't have: interface gráfica complexa, autenticação de usuário
+- [x] **P2.3.1** — Must have: CRUD Aeronave, CRUD Cia Aérea, CRUD Aeroporto, CRUD Passageiro, CRUD Voo, Reserva
+- [x] **P2.3.2** — Should have: busca por ID, filtros, validação de dados
+- [x] **P2.3.3** — Could have: relatórios, histórico de reservas por passageiro
+- [x] **P2.3.4** — Won't have: interface gráfica complexa, autenticação de usuário
 
 ### 2.4 Definir o MVP (Mínimo Produto Viável)
 
-- [ ] **P2.4.1** — Escopo mínimo para validação do professor
-- [ ] **P2.4.2** — Funcionalidades obrigatórias: menu funcional + CRUD Aeronave + Consulta Voos + Reserva
-- [ ] **P2.4.3** — Funcionalidades de suporte: cadastros de Cia, Aeroporto, Passageiro
-- [ ] **P2.4.4** — Documentar escopo do MVP no roadmap
+- [x] **P2.4.1** — Escopo mínimo para validação do professor
+- [x] **P2.4.2** — Funcionalidades obrigatórias: menu funcional + CRUD Aeronave + Consulta Voos + Reserva
+- [x] **P2.4.3** — Funcionalidades de suporte: cadastros de Cia, Aeroporto, Passageiro
+- [x] **P2.4.4** — Documentar escopo do MVP no `docs/vision.md`
 
 ### 2.5 Criar Casos de Uso
 
-- [ ] **P2.5.1** — Escrever UC-01 a UC-08 (ver roadmap.md)
-- [ ] **P2.5.2** — Validar fluxos principais e alternativos
-- [ ] **P2.5.3** — Validar regras de negócio (RN-01 a RN-21)
+- [x] **P2.5.1** — Escrever UC-01 a UC-08 (em `docs/use-cases.md`)
+- [x] **P2.5.2** — Validar fluxos principais e alternativos
+- [x] **P2.5.3** — Validar regras de negócio (RN-01 a RN-21)
 
 ### 2.6 Definir DoD (Definition of Done)
 
-- [ ] **P2.6.1** — Persistência real no banco (sem dados mockados)
-- [ ] **P2.6.2** — Tratamento de exceções (sistema não quebra)
-- [ ] **P2.6.3** — Fechamento de recursos (try-with-resources)
-- [ ] **P2.6.4** — Compilação limpa com Maven
-- [ ] **P2.6.5** — Portabilidade Windows
+- [x] **P2.6.1** — Persistência real no banco (sem dados mockados)
+- [x] **P2.6.2** — Tratamento de exceções (sistema não quebra)
+- [x] **P2.6.3** — Fechamento de recursos (try-with-resources)
+- [x] **P2.6.4** — Compilação limpa com Maven
+- [x] **P2.6.5** — Portabilidade Windows
 
 ### 2.7 Registrar lições do Planejamento
 
-- [ ] **P2.7.1** — O plano está factível no prazo da faculdade?
-- [ ] **P2.7.2** — Quais riscos você identificou?
+- [x] **P2.7.1** — O plano está factível no prazo da faculdade?
+- [x] **P2.7.2** — Quais riscos você identificou?
 
 ---
 
@@ -545,26 +545,33 @@ public class XxxDAO {
 
 ### 7.1 Diagrama de Casos de Uso
 
-- [ ] Criar diagrama com ator "Administrador" e "Atendente"
-- [ ] Incluir UC-01 a UC-08
-- [ ] Relacionar atores aos casos de uso (include/extend)
-- [ ] Ferramenta: draw.io, Astah, ou Lucidchart
+- [x] Criar diagrama com ator "Administrador" e "Atendente"
+- [x] Incluir UC-01 a UC-08
+- [x] Relacionar atores aos casos de uso (include/extend)
+- [x] Ferramenta: draw.io → exportado PNG em `docs/images/diagrama-casos-de-uso.png`
 
 ### 7.2 Diagrama de Classes UML
 
-- [ ] Incluir todas as 7 entidades (model)
-- [ ] Incluir ConnectionFactory, Validador, SistemaAviação
-- [ ] Mostrar atributos e métodos
-- [ ] Mostrar relacionamentos (associação, dependência)
-- [ ] Ferramenta: draw.io ou Astah
+- [x] Incluir todas as 7 entidades (model)
+- [x] Incluir ConnectionFactory, Validador, SistemaAviação
+- [x] Mostrar atributos e métodos
+- [x] Mostrar relacionamentos (associação, dependência)
+- [x] Versões: PNG (`docs/images/`) + Mermaid (`docs/class-diagram.md`) + draw.io
 
 ### 7.3 Diagrama de Sequência
 
-- [ ] Criar ao menos 2 diagramas:
-  - [ ] Sequência UC-01 — Cadastrar Aeronave
-  - [ ] Sequência UC-07 — Efetuar Reserva
-- [ ] Mostrar: Ator → Menu → DAO → Banco → resposta
-- [ ] Ferramenta: draw.io ou Astah
+- [x] Criar 9 diagramas (todos os UCs):
+  - [x] UC-01 — Consulta Geral de Aeronaves
+  - [x] UC-01 — Cadastrar Aeronave
+  - [x] UC-02 — Cadastrar Companhia
+  - [x] UC-03 — Cadastrar Aeroporto
+  - [x] UC-04 — Cadastrar Passageiro
+  - [x] UC-05 — Cadastrar Voo
+  - [x] UC-06 — Vincular Aeronave a Companhia
+  - [x] UC-07 — Efetuar Reserva
+  - [x] UC-08 — Cancelar Reserva
+- [x] Mostrar: Ator → Menu → DAO → Banco → resposta
+- [x] Formatos: PNG em `docs/images/` + draw.io em `docs/legacy/`
 
 ### 7.4 Diagrama Entidade-Relacionamento (DER)
 
