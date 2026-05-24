@@ -1,0 +1,574 @@
+<?xml version="1.0" ?>
+<mxfile host="app.diagrams.net" modified="2026-05-24T16:32:00.000Z" agent="Antigravity" version="21.0.0" type="device">
+  <diagram id="page-usecase" name="1. Diagrama de Casos de Uso">
+    <mxGraphModel dx="1000" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0" background="#ffffff">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="actor-operador" value="Operador" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#e9ecef;strokeColor=#343a40;strokeWidth=1.5;fontColor=#343a40;" vertex="1" parent="1">
+          <mxGeometry x="80" y="320" width="30" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="system-boundary" value="Sistema de Gerenciamento de Aviação Comercial (MVP)" style="swimlane;whiteSpace=wrap;html=1;startSize=30;fillColor=#f8f9fa;strokeColor=#495057;strokeWidth=1.5;fontStyle=1;align=center;fontColor=#495057;" vertex="1" parent="1">
+          <mxGeometry x="200" y="40" width="750" height="660" as="geometry"/>
+        </mxCell>
+        <mxCell id="uc-01" value="UC-01: Gerenciar Aeronaves" style="ellipse;whiteSpace=wrap;html=1;fillColor=#e8f4fd;strokeColor=#1d3557;strokeWidth=1.5;fontColor=#1d3557;fontStyle=1;align=center;" vertex="1" parent="system-boundary">
+          <mxGeometry x="60" y="50" width="220" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="conn-uc-01" value="" style="endArrow=none;html=1;rounded=0;strokeWidth=1.5;strokeColor=#495057;" edge="1" parent="1" source="actor-operador" target="uc-01">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="uc-02" value="UC-02: Gerenciar Companhias Aéreas" style="ellipse;whiteSpace=wrap;html=1;fillColor=#e8f4fd;strokeColor=#1d3557;strokeWidth=1.5;fontColor=#1d3557;fontStyle=1;align=center;" vertex="1" parent="system-boundary">
+          <mxGeometry x="60" y="120" width="220" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="conn-uc-02" value="" style="endArrow=none;html=1;rounded=0;strokeWidth=1.5;strokeColor=#495057;" edge="1" parent="1" source="actor-operador" target="uc-02">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="uc-03" value="UC-03: Gerenciar Aeroportos" style="ellipse;whiteSpace=wrap;html=1;fillColor=#e8f4fd;strokeColor=#1d3557;strokeWidth=1.5;fontColor=#1d3557;fontStyle=1;align=center;" vertex="1" parent="system-boundary">
+          <mxGeometry x="60" y="190" width="220" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="conn-uc-03" value="" style="endArrow=none;html=1;rounded=0;strokeWidth=1.5;strokeColor=#495057;" edge="1" parent="1" source="actor-operador" target="uc-03">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="uc-04" value="UC-04: Gerenciar Passageiros" style="ellipse;whiteSpace=wrap;html=1;fillColor=#e8f4fd;strokeColor=#1d3557;strokeWidth=1.5;fontColor=#1d3557;fontStyle=1;align=center;" vertex="1" parent="system-boundary">
+          <mxGeometry x="60" y="260" width="220" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="conn-uc-04" value="" style="endArrow=none;html=1;rounded=0;strokeWidth=1.5;strokeColor=#495057;" edge="1" parent="1" source="actor-operador" target="uc-04">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="uc-05" value="UC-05: Gerenciar Voos" style="ellipse;whiteSpace=wrap;html=1;fillColor=#e8f4fd;strokeColor=#1d3557;strokeWidth=1.5;fontColor=#1d3557;fontStyle=1;align=center;" vertex="1" parent="system-boundary">
+          <mxGeometry x="60" y="330" width="220" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="conn-uc-05" value="" style="endArrow=none;html=1;rounded=0;strokeWidth=1.5;strokeColor=#495057;" edge="1" parent="1" source="actor-operador" target="uc-05">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="uc-06" value="UC-06: Vincular Aeronave a Companhia" style="ellipse;whiteSpace=wrap;html=1;fillColor=#e8f4fd;strokeColor=#1d3557;strokeWidth=1.5;fontColor=#1d3557;fontStyle=1;align=center;" vertex="1" parent="system-boundary">
+          <mxGeometry x="60" y="400" width="220" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="conn-uc-06" value="" style="endArrow=none;html=1;rounded=0;strokeWidth=1.5;strokeColor=#495057;" edge="1" parent="1" source="actor-operador" target="uc-06">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="uc-07" value="UC-07: Efetuar Reserva" style="ellipse;whiteSpace=wrap;html=1;fillColor=#e8f4fd;strokeColor=#1d3557;strokeWidth=1.5;fontColor=#1d3557;fontStyle=1;align=center;" vertex="1" parent="system-boundary">
+          <mxGeometry x="60" y="470" width="220" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="conn-uc-07" value="" style="endArrow=none;html=1;rounded=0;strokeWidth=1.5;strokeColor=#495057;" edge="1" parent="1" source="actor-operador" target="uc-07">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="uc-08" value="UC-08: Cancelar Reserva" style="ellipse;whiteSpace=wrap;html=1;fillColor=#e8f4fd;strokeColor=#1d3557;strokeWidth=1.5;fontColor=#1d3557;fontStyle=1;align=center;" vertex="1" parent="system-boundary">
+          <mxGeometry x="60" y="540" width="220" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="conn-uc-08" value="" style="endArrow=none;html=1;rounded=0;strokeWidth=1.5;strokeColor=#495057;" edge="1" parent="1" source="actor-operador" target="uc-08">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="uc-val-aero" value="Validar Existência de Aeroporto" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f1faee;strokeColor=#457b9d;strokeWidth=1.5;fontColor=#1d3557;fontStyle=2;align=center;" vertex="1" parent="system-boundary">
+          <mxGeometry x="450" y="250" width="220" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="uc-val-vinc" value="Verificar Vínculo Ativo" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f1faee;strokeColor=#457b9d;strokeWidth=1.5;fontColor=#1d3557;fontStyle=2;align=center;" vertex="1" parent="system-boundary">
+          <mxGeometry x="450" y="400" width="220" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="uc-val-assento" value="Validar Disponibilidade de Assento" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f1faee;strokeColor=#457b9d;strokeWidth=1.5;fontColor=#1d3557;fontStyle=2;align=center;" vertex="1" parent="system-boundary">
+          <mxGeometry x="450" y="470" width="220" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="uc-cons-voo" value="Consultar Malha Aérea" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f1faee;strokeColor=#457b9d;strokeWidth=1.5;fontColor=#1d3557;fontStyle=2;align=center;" vertex="1" parent="system-boundary">
+          <mxGeometry x="450" y="550" width="220" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="inc-1" value="&amp;lt;&amp;lt;include&amp;gt;&amp;gt;" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;strokeWidth=1.5;strokeColor=#1d3557;fontColor=#1d3557;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="uc-05" target="uc-val-aero">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="inc-2" value="&amp;lt;&amp;lt;include&amp;gt;&amp;gt;" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;strokeWidth=1.5;strokeColor=#1d3557;fontColor=#1d3557;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="uc-06" target="uc-val-vinc">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="inc-3" value="&amp;lt;&amp;lt;include&amp;gt;&amp;gt;" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;strokeWidth=1.5;strokeColor=#1d3557;fontColor=#1d3557;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="uc-07" target="uc-val-assento">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="ext-1" value="&amp;lt;&amp;lt;extend&amp;gt;&amp;gt;" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;strokeWidth=1.5;strokeColor=#e63946;fontColor=#e63946;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="uc-cons-voo" target="uc-07">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="page-class" name="2. Diagrama de Classes UML">
+    <mxGraphModel dx="1000" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0" background="#ffffff">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="cls-aeronave" value="&amp;lt;b&amp;gt;Aeronave&amp;lt;/b&amp;gt;&amp;lt;br/&amp;gt;&amp;lt;i&amp;gt;com.aviacao.model&amp;lt;/i&amp;gt;&amp;lt;br/&amp;gt;&amp;lt;hr/&amp;gt;- idAeronave: int&amp;lt;br/&amp;gt;- modelo: String&amp;lt;br/&amp;gt;- capacidade: int&amp;lt;br/&amp;gt;- statusAtivo: char&amp;lt;br/&amp;gt;&amp;lt;hr/&amp;gt;+ getters/setters()" style="whiteSpace=wrap;html=1;align=left;verticalAlign=top;fillColor=#f1faee;strokeColor=#457b9d;strokeWidth=1.5;fontColor=#1d3557;overflow=hidden;margin-left: 5px; margin-right: 5px;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="140" height="140" as="geometry"/>
+        </mxCell>
+        <mxCell id="cls-aeronavecia" value="&amp;lt;b&amp;gt;AeronaveCia&amp;lt;/b&amp;gt;&amp;lt;br/&amp;gt;&amp;lt;i&amp;gt;com.aviacao.model&amp;lt;/i&amp;gt;&amp;lt;br/&amp;gt;&amp;lt;hr/&amp;gt;- idAeronave: int&amp;lt;br/&amp;gt;- idCia: int&amp;lt;br/&amp;gt;- dataAquisicao: LocalDate&amp;lt;br/&amp;gt;&amp;lt;hr/&amp;gt;+ getters/setters()" style="whiteSpace=wrap;html=1;align=left;verticalAlign=top;fillColor=#f1faee;strokeColor=#457b9d;strokeWidth=1.5;fontColor=#1d3557;overflow=hidden;margin-left: 5px; margin-right: 5px;" vertex="1" parent="1">
+          <mxGeometry x="240" y="40" width="150" height="140" as="geometry"/>
+        </mxCell>
+        <mxCell id="cls-ciaaerea" value="&amp;lt;b&amp;gt;CiaAerea&amp;lt;/b&amp;gt;&amp;lt;br/&amp;gt;&amp;lt;i&amp;gt;com.aviacao.model&amp;lt;/i&amp;gt;&amp;lt;br/&amp;gt;&amp;lt;hr/&amp;gt;- idCia: int&amp;lt;br/&amp;gt;- nome: String&amp;lt;br/&amp;gt;- cnpj: String&amp;lt;br/&amp;gt;- statusAtivo: char&amp;lt;br/&amp;gt;&amp;lt;hr/&amp;gt;+ getters/setters()" style="whiteSpace=wrap;html=1;align=left;verticalAlign=top;fillColor=#f1faee;strokeColor=#457b9d;strokeWidth=1.5;fontColor=#1d3557;overflow=hidden;margin-left: 5px; margin-right: 5px;" vertex="1" parent="1">
+          <mxGeometry x="450" y="40" width="140" height="140" as="geometry"/>
+        </mxCell>
+        <mxCell id="cls-aeroporto" value="&amp;lt;b&amp;gt;Aeroporto&amp;lt;/b&amp;gt;&amp;lt;br/&amp;gt;&amp;lt;i&amp;gt;com.aviacao.model&amp;lt;/i&amp;gt;&amp;lt;br/&amp;gt;&amp;lt;hr/&amp;gt;- codAeroporto: int&amp;lt;br/&amp;gt;- nome: String&amp;lt;br/&amp;gt;- sigla: String&amp;lt;br/&amp;gt;&amp;lt;hr/&amp;gt;+ getters/setters()" style="whiteSpace=wrap;html=1;align=left;verticalAlign=top;fillColor=#f1faee;strokeColor=#457b9d;strokeWidth=1.5;fontColor=#1d3557;overflow=hidden;margin-left: 5px; margin-right: 5px;" vertex="1" parent="1">
+          <mxGeometry x="660" y="40" width="140" height="140" as="geometry"/>
+        </mxCell>
+        <mxCell id="cls-voo" value="&amp;lt;b&amp;gt;Voo&amp;lt;/b&amp;gt;&amp;lt;br/&amp;gt;&amp;lt;i&amp;gt;com.aviacao.model&amp;lt;/i&amp;gt;&amp;lt;br/&amp;gt;&amp;lt;hr/&amp;gt;- codVoo: String&amp;lt;br/&amp;gt;- codAeroporto: int&amp;lt;br/&amp;gt;- horários...&amp;lt;br/&amp;gt;&amp;lt;hr/&amp;gt;+ getters/setters()" style="whiteSpace=wrap;html=1;align=left;verticalAlign=top;fillColor=#f1faee;strokeColor=#457b9d;strokeWidth=1.5;fontColor=#1d3557;overflow=hidden;margin-left: 5px; margin-right: 5px;" vertex="1" parent="1">
+          <mxGeometry x="840" y="40" width="140" height="140" as="geometry"/>
+        </mxCell>
+        <mxCell id="cls-reserva" value="&amp;lt;b&amp;gt;Reserva&amp;lt;/b&amp;gt;&amp;lt;br/&amp;gt;&amp;lt;i&amp;gt;com.aviacao.model&amp;lt;/i&amp;gt;&amp;lt;br/&amp;gt;&amp;lt;hr/&amp;gt;- codReserva: String&amp;lt;br/&amp;gt;- idPassageiro: int&amp;lt;br/&amp;gt;- codVoo: String&amp;lt;br/&amp;gt;- assento: String&amp;lt;br/&amp;gt;&amp;lt;hr/&amp;gt;+ getters/setters()" style="whiteSpace=wrap;html=1;align=left;verticalAlign=top;fillColor=#f1faee;strokeColor=#457b9d;strokeWidth=1.5;fontColor=#1d3557;overflow=hidden;margin-left: 5px; margin-right: 5px;" vertex="1" parent="1">
+          <mxGeometry x="840" y="240" width="140" height="150" as="geometry"/>
+        </mxCell>
+        <mxCell id="cls-passageiro" value="&amp;lt;b&amp;gt;Passageiro&amp;lt;/b&amp;gt;&amp;lt;br/&amp;gt;&amp;lt;i&amp;gt;com.aviacao.model&amp;lt;/i&amp;gt;&amp;lt;br/&amp;gt;&amp;lt;hr/&amp;gt;- idPassageiro: int&amp;lt;br/&amp;gt;- nome: String&amp;lt;br/&amp;gt;- email: String&amp;lt;br/&amp;gt;&amp;lt;hr/&amp;gt;+ getters/setters()" style="whiteSpace=wrap;html=1;align=left;verticalAlign=top;fillColor=#f1faee;strokeColor=#457b9d;strokeWidth=1.5;fontColor=#1d3557;overflow=hidden;margin-left: 5px; margin-right: 5px;" vertex="1" parent="1">
+          <mxGeometry x="1040" y="240" width="120" height="150" as="geometry"/>
+        </mxCell>
+        <mxCell id="cls-factory" value="&amp;lt;b&amp;gt;ConnectionFactory&amp;lt;/b&amp;gt;&amp;lt;br/&amp;gt;&amp;lt;i&amp;gt;com.aviacao.dao&amp;lt;/i&amp;gt;&amp;lt;br/&amp;gt;&amp;lt;hr/&amp;gt;- instance: ConnectionFactory&amp;lt;br/&amp;gt;&amp;lt;hr/&amp;gt;+ getInstance(): ConnectionFactory&amp;lt;br/&amp;gt;+ getConnection(): Connection" style="whiteSpace=wrap;html=1;align=left;verticalAlign=top;fillColor=#e8f4fd;strokeColor=#1d3557;strokeWidth=1.5;fontColor=#1d3557;overflow=hidden;margin-left: 5px; margin-right: 5px;" vertex="1" parent="1">
+          <mxGeometry x="40" y="240" width="240" height="110" as="geometry"/>
+        </mxCell>
+        <mxCell id="cls-validador" value="&amp;lt;b&amp;gt;Validador&amp;lt;/b&amp;gt;&amp;lt;br/&amp;gt;&amp;lt;i&amp;gt;com.aviacao.service&amp;lt;/i&amp;gt;&amp;lt;br/&amp;gt;&amp;lt;hr/&amp;gt;&amp;lt;hr/&amp;gt;+ validarCnpj(String): bool&amp;lt;br/&amp;gt;+ validarSigla(String): bool&amp;lt;br/&amp;gt;+ validarAssento(): bool" style="whiteSpace=wrap;html=1;align=left;verticalAlign=top;fillColor=#fdf0d5;strokeColor=#669bbc;strokeWidth=1.5;fontColor=#003049;overflow=hidden;margin-left: 5px; margin-right: 5px;" vertex="1" parent="1">
+          <mxGeometry x="320" y="240" width="220" height="110" as="geometry"/>
+        </mxCell>
+        <mxCell id="cls-sistema" value="&amp;lt;b&amp;gt;SistemaAviacao&amp;lt;/b&amp;gt;&amp;lt;br/&amp;gt;&amp;lt;i&amp;gt;com.aviacao.main&amp;lt;/i&amp;gt;&amp;lt;br/&amp;gt;&amp;lt;hr/&amp;gt;- scanner: Scanner&amp;lt;br/&amp;gt;- daos...&amp;lt;br/&amp;gt;&amp;lt;hr/&amp;gt;+ main()&amp;lt;br/&amp;gt;+ iniciar()" style="whiteSpace=wrap;html=1;align=left;verticalAlign=top;fillColor=#f8f9fa;strokeColor=#495057;strokeWidth=1.5;fontColor=#343a40;overflow=hidden;margin-left: 5px; margin-right: 5px;" vertex="1" parent="1">
+          <mxGeometry x="580" y="240" width="160" height="150" as="geometry"/>
+        </mxCell>
+        <mxCell id="cls-aerodao" value="&amp;lt;b&amp;gt;AeronaveDAO&amp;lt;/b&amp;gt;&amp;lt;br/&amp;gt;&amp;lt;hr/&amp;gt;+ insert()&amp;lt;br/&amp;gt;+ findAll()" style="whiteSpace=wrap;html=1;align=left;verticalAlign=top;fillColor=#fae1df;strokeColor=#e63946;strokeWidth=1.5;fontColor=#1d3557;overflow=hidden;margin-left: 5px; margin-right: 5px;" vertex="1" parent="1">
+          <mxGeometry x="40" y="480" width="120" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="cls-ciadao" value="&amp;lt;b&amp;gt;CiaAereaDAO&amp;lt;/b&amp;gt;&amp;lt;br/&amp;gt;&amp;lt;hr/&amp;gt;+ insert()&amp;lt;br/&amp;gt;+ findAll()" style="whiteSpace=wrap;html=1;align=left;verticalAlign=top;fillColor=#fae1df;strokeColor=#e63946;strokeWidth=1.5;fontColor=#1d3557;overflow=hidden;margin-left: 5px; margin-right: 5px;" vertex="1" parent="1">
+          <mxGeometry x="180" y="480" width="120" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="cls-aeronaveciadao" value="&amp;lt;b&amp;gt;AeronaveCiaDAO&amp;lt;/b&amp;gt;&amp;lt;br/&amp;gt;&amp;lt;hr/&amp;gt;+ insert()&amp;lt;br/&amp;gt;+ findByIds()" style="whiteSpace=wrap;html=1;align=left;verticalAlign=top;fillColor=#fae1df;strokeColor=#e63946;strokeWidth=1.5;fontColor=#1d3557;overflow=hidden;margin-left: 5px; margin-right: 5px;" vertex="1" parent="1">
+          <mxGeometry x="320" y="480" width="140" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="cls-airportdao" value="&amp;lt;b&amp;gt;AeroportoDAO&amp;lt;/b&amp;gt;&amp;lt;br/&amp;gt;&amp;lt;hr/&amp;gt;+ insert()&amp;lt;br/&amp;gt;+ findAll()" style="whiteSpace=wrap;html=1;align=left;verticalAlign=top;fillColor=#fae1df;strokeColor=#e63946;strokeWidth=1.5;fontColor=#1d3557;overflow=hidden;margin-left: 5px; margin-right: 5px;" vertex="1" parent="1">
+          <mxGeometry x="480" y="480" width="120" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="cls-passdao" value="&amp;lt;b&amp;gt;PassageiroDAO&amp;lt;/b&amp;gt;&amp;lt;br/&amp;gt;&amp;lt;hr/&amp;gt;+ insert()&amp;lt;br/&amp;gt;+ findAll()" style="whiteSpace=wrap;html=1;align=left;verticalAlign=top;fillColor=#fae1df;strokeColor=#e63946;strokeWidth=1.5;fontColor=#1d3557;overflow=hidden;margin-left: 5px; margin-right: 5px;" vertex="1" parent="1">
+          <mxGeometry x="620" y="480" width="120" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="cls-voodao" value="&amp;lt;b&amp;gt;VooDAO&amp;lt;/b&amp;gt;&amp;lt;br/&amp;gt;&amp;lt;hr/&amp;gt;+ insert()&amp;lt;br/&amp;gt;+ findAll()" style="whiteSpace=wrap;html=1;align=left;verticalAlign=top;fillColor=#fae1df;strokeColor=#e63946;strokeWidth=1.5;fontColor=#1d3557;overflow=hidden;margin-left: 5px; margin-right: 5px;" vertex="1" parent="1">
+          <mxGeometry x="760" y="480" width="120" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="cls-resdao" value="&amp;lt;b&amp;gt;ReservaDAO&amp;lt;/b&amp;gt;&amp;lt;br/&amp;gt;&amp;lt;hr/&amp;gt;+ insert()&amp;lt;br/&amp;gt;+ assentoOcupado()" style="whiteSpace=wrap;html=1;align=left;verticalAlign=top;fillColor=#fae1df;strokeColor=#e63946;strokeWidth=1.5;fontColor=#1d3557;overflow=hidden;margin-left: 5px; margin-right: 5px;" vertex="1" parent="1">
+          <mxGeometry x="900" y="480" width="140" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="l-a-ac" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#1d3557;strokeWidth=2;edgeStyle=orthogonalEdgeStyle;labelBackgroundColor=#ffffff;fontColor=#1d3557;" edge="1" parent="1" source="cls-aeronave" target="cls-aeronavecia">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="l-a-ac-src" value="1" style="edgeLabel;html=1;align=left;verticalAlign=bottom;resizable=0;points=[];fontColor=#1d3557;labelBackgroundColor=#ffffff;" vertex="1" connectable="0" parent="l-a-ac">
+          <mxGeometry x="-0.8" y="0" relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="l-a-ac-tgt" value="0..*" style="edgeLabel;html=1;align=right;verticalAlign=bottom;resizable=0;points=[];fontColor=#1d3557;labelBackgroundColor=#ffffff;" vertex="1" connectable="0" parent="l-a-ac">
+          <mxGeometry x="0.8" y="0" relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="l-c-ac" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#1d3557;strokeWidth=2;edgeStyle=orthogonalEdgeStyle;labelBackgroundColor=#ffffff;fontColor=#1d3557;" edge="1" parent="1" source="cls-ciaaerea" target="cls-aeronavecia">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="l-c-ac-src" value="1" style="edgeLabel;html=1;align=left;verticalAlign=bottom;resizable=0;points=[];fontColor=#1d3557;labelBackgroundColor=#ffffff;" vertex="1" connectable="0" parent="l-c-ac">
+          <mxGeometry x="-0.8" y="0" relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="l-c-ac-tgt" value="0..*" style="edgeLabel;html=1;align=right;verticalAlign=bottom;resizable=0;points=[];fontColor=#1d3557;labelBackgroundColor=#ffffff;" vertex="1" connectable="0" parent="l-c-ac">
+          <mxGeometry x="0.8" y="0" relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="l-ap-v" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#1d3557;strokeWidth=2;edgeStyle=orthogonalEdgeStyle;labelBackgroundColor=#ffffff;fontColor=#1d3557;" edge="1" parent="1" source="cls-aeroporto" target="cls-voo">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="l-ap-v-src" value="1" style="edgeLabel;html=1;align=left;verticalAlign=bottom;resizable=0;points=[];fontColor=#1d3557;labelBackgroundColor=#ffffff;" vertex="1" connectable="0" parent="l-ap-v">
+          <mxGeometry x="-0.8" y="0" relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="l-ap-v-tgt" value="0..*" style="edgeLabel;html=1;align=right;verticalAlign=bottom;resizable=0;points=[];fontColor=#1d3557;labelBackgroundColor=#ffffff;" vertex="1" connectable="0" parent="l-ap-v">
+          <mxGeometry x="0.8" y="0" relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="l-v-r" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#1d3557;strokeWidth=2;edgeStyle=orthogonalEdgeStyle;labelBackgroundColor=#ffffff;fontColor=#1d3557;" edge="1" parent="1" source="cls-voo" target="cls-reserva">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="l-v-r-src" value="1" style="edgeLabel;html=1;align=left;verticalAlign=bottom;resizable=0;points=[];fontColor=#1d3557;labelBackgroundColor=#ffffff;" vertex="1" connectable="0" parent="l-v-r">
+          <mxGeometry x="-0.8" y="0" relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="l-v-r-tgt" value="0..*" style="edgeLabel;html=1;align=right;verticalAlign=bottom;resizable=0;points=[];fontColor=#1d3557;labelBackgroundColor=#ffffff;" vertex="1" connectable="0" parent="l-v-r">
+          <mxGeometry x="0.8" y="0" relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="l-p-r" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#1d3557;strokeWidth=2;edgeStyle=orthogonalEdgeStyle;labelBackgroundColor=#ffffff;fontColor=#1d3557;" edge="1" parent="1" source="cls-passageiro" target="cls-reserva">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="l-p-r-src" value="1" style="edgeLabel;html=1;align=left;verticalAlign=bottom;resizable=0;points=[];fontColor=#1d3557;labelBackgroundColor=#ffffff;" vertex="1" connectable="0" parent="l-p-r">
+          <mxGeometry x="-0.8" y="0" relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="l-p-r-tgt" value="0..*" style="edgeLabel;html=1;align=right;verticalAlign=bottom;resizable=0;points=[];fontColor=#1d3557;labelBackgroundColor=#ffffff;" vertex="1" connectable="0" parent="l-p-r">
+          <mxGeometry x="0.8" y="0" relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="l-d-a" value="" style="endArrow=open;dashed=1;endFill=0;strokeColor=#457b9d;strokeWidth=1.5;html=1;rounded=0;labelBackgroundColor=#ffffff;fontColor=#1d3557;" edge="1" parent="1" source="cls-aerodao" target="cls-aeronave">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="l-d-a-tgt" value="&amp;lt;&amp;lt;use&amp;gt;&amp;gt;" style="edgeLabel;html=1;align=right;verticalAlign=bottom;resizable=0;points=[];fontColor=#1d3557;labelBackgroundColor=#ffffff;" vertex="1" connectable="0" parent="l-d-a">
+          <mxGeometry x="0.8" y="0" relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="l-d-v" value="" style="endArrow=open;dashed=1;endFill=0;strokeColor=#457b9d;strokeWidth=1.5;html=1;rounded=0;labelBackgroundColor=#ffffff;fontColor=#1d3557;" edge="1" parent="1" source="cls-voodao" target="cls-voo">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="l-d-v-tgt" value="&amp;lt;&amp;lt;use&amp;gt;&amp;gt;" style="edgeLabel;html=1;align=right;verticalAlign=bottom;resizable=0;points=[];fontColor=#1d3557;labelBackgroundColor=#ffffff;" vertex="1" connectable="0" parent="l-d-v">
+          <mxGeometry x="0.8" y="0" relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="l-d-r" value="" style="endArrow=open;dashed=1;endFill=0;strokeColor=#457b9d;strokeWidth=1.5;html=1;rounded=0;labelBackgroundColor=#ffffff;fontColor=#1d3557;" edge="1" parent="1" source="cls-resdao" target="cls-reserva">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="l-d-r-tgt" value="&amp;lt;&amp;lt;use&amp;gt;&amp;gt;" style="edgeLabel;html=1;align=right;verticalAlign=bottom;resizable=0;points=[];fontColor=#1d3557;labelBackgroundColor=#ffffff;" vertex="1" connectable="0" parent="l-d-r">
+          <mxGeometry x="0.8" y="0" relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="l-sys-d" value="" style="endArrow=diamondThin;endFill=1;strokeColor=#495057;strokeWidth=1.5;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;labelBackgroundColor=#ffffff;fontColor=#343a40;" edge="1" parent="1" source="cls-sistema" target="cls-aerodao">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="l-sys-d-src" value="1" style="edgeLabel;html=1;align=left;verticalAlign=bottom;resizable=0;points=[];fontColor=#1d3557;labelBackgroundColor=#ffffff;" vertex="1" connectable="0" parent="l-sys-d">
+          <mxGeometry x="-0.8" y="0" relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="l-sys-d-tgt" value="1" style="edgeLabel;html=1;align=right;verticalAlign=bottom;resizable=0;points=[];fontColor=#1d3557;labelBackgroundColor=#ffffff;" vertex="1" connectable="0" parent="l-sys-d">
+          <mxGeometry x="0.8" y="0" relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="l-sys-v" value="" style="endArrow=diamondThin;endFill=1;strokeColor=#495057;strokeWidth=1.5;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;labelBackgroundColor=#ffffff;fontColor=#343a40;" edge="1" parent="1" source="cls-sistema" target="cls-voodao">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="l-sys-v-src" value="1" style="edgeLabel;html=1;align=left;verticalAlign=bottom;resizable=0;points=[];fontColor=#1d3557;labelBackgroundColor=#ffffff;" vertex="1" connectable="0" parent="l-sys-v">
+          <mxGeometry x="-0.8" y="0" relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="l-sys-v-tgt" value="1" style="edgeLabel;html=1;align=right;verticalAlign=bottom;resizable=0;points=[];fontColor=#1d3557;labelBackgroundColor=#ffffff;" vertex="1" connectable="0" parent="l-sys-v">
+          <mxGeometry x="0.8" y="0" relative="1" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="page-seq-consulta" name="3. Seq - Consulta Geral">
+    <mxGraphModel dx="1000" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0" background="#ffffff">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="act" value="Operador" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#e9ecef;strokeColor=#343a40;strokeWidth=1.5;fontColor=#343a40;" vertex="1" parent="1">
+          <mxGeometry x="80" y="80" width="30" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="act-line" value="" style="endArrow=none;dashed=1;html=1;rounded=0;strokeColor=#495057;strokeWidth=1.5;" edge="1" parent="1">
+          <mxGeometry x="95" y="140" width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="95" y="140" as="sourcePoint"/>
+            <mxPoint x="95" y="600" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ui" value="InterfaceUsuario
+(Console)" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;fillColor=#e8f4fd;strokeColor=#1d3557;strokeWidth=1.5;fontColor=#1d3557;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="260" y="80" width="100" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="srv" value="AeronaveService" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;fillColor=#f1faee;strokeColor=#457b9d;strokeWidth=1.5;fontColor=#1d3557;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="500" y="80" width="120" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="dao" value="AeronaveDAO" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;fillColor=#fae1df;strokeColor=#e63946;strokeWidth=1.5;fontColor=#1d3557;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="760" y="80" width="110" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="db" value="MariaDB" style="shape=cylinder;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#fdf0d5;strokeColor=#669bbc;strokeWidth=1.5;fontColor=#003049;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="980" y="80" width="100" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="db-line" value="" style="endArrow=none;dashed=1;html=1;rounded=0;strokeColor=#495057;strokeWidth=1.5;" edge="1" parent="1">
+          <mxGeometry x="1030" y="130" width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1030" y="130" as="sourcePoint"/>
+            <mxPoint x="1030" y="600" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a-ui" value="" style="whiteSpace=wrap;html=1;fillColor=#f8f9fa;strokeColor=#343a40;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="305" y="160" width="10" height="320" as="geometry"/>
+        </mxCell>
+        <mxCell id="a-srv" value="" style="whiteSpace=wrap;html=1;fillColor=#f8f9fa;strokeColor=#343a40;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="555" y="190" width="10" height="230" as="geometry"/>
+        </mxCell>
+        <mxCell id="a-dao" value="" style="whiteSpace=wrap;html=1;fillColor=#f8f9fa;strokeColor=#343a40;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="810" y="220" width="10" height="140" as="geometry"/>
+        </mxCell>
+        <mxCell id="m1" value="1. Escolhe &quot;Consultar Frota&quot;" style="endArrow=block;html=1;rounded=0;strokeWidth=1.5;strokeColor=#1d3557;fontColor=#1d3557;labelBackgroundColor=#ffffff;verticalAlign=bottom;edgeStyle=orthogonalEdgeStyle;align=center;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="95" y="160" as="sourcePoint"/>
+            <mxPoint x="305" y="160" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m2" value="2. listarTodas()" style="endArrow=block;html=1;rounded=0;strokeWidth=1.5;strokeColor=#1d3557;fontColor=#1d3557;labelBackgroundColor=#ffffff;verticalAlign=bottom;edgeStyle=orthogonalEdgeStyle;align=center;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="315" y="190" as="sourcePoint"/>
+            <mxPoint x="555" y="190" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m3" value="3. buscarTodas()" style="endArrow=block;html=1;rounded=0;strokeWidth=1.5;strokeColor=#1d3557;fontColor=#1d3557;labelBackgroundColor=#ffffff;verticalAlign=bottom;edgeStyle=orthogonalEdgeStyle;align=center;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="565" y="220" as="sourcePoint"/>
+            <mxPoint x="810" y="220" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m4" value="4. SELECT * FROM aeronave" style="endArrow=block;html=1;rounded=0;strokeWidth=1.5;strokeColor=#1d3557;fontColor=#1d3557;labelBackgroundColor=#ffffff;verticalAlign=bottom;edgeStyle=orthogonalEdgeStyle;align=center;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="820" y="250" as="sourcePoint"/>
+            <mxPoint x="1030" y="250" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m5" value="5. ResultSet com dados" style="endArrow=open;dashed=1;endFill=0;html=1;rounded=0;strokeWidth=1.5;strokeColor=#e63946;fontColor=#e63946;labelBackgroundColor=#ffffff;verticalAlign=bottom;edgeStyle=orthogonalEdgeStyle;align=center;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1030" y="290" as="sourcePoint"/>
+            <mxPoint x="820" y="290" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m6" value="6. List&lt;Aeronave&gt;" style="endArrow=open;dashed=1;endFill=0;html=1;rounded=0;strokeWidth=1.5;strokeColor=#e63946;fontColor=#e63946;labelBackgroundColor=#ffffff;verticalAlign=bottom;edgeStyle=orthogonalEdgeStyle;align=center;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="810" y="320" as="sourcePoint"/>
+            <mxPoint x="565" y="320" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m7" value="7. List&lt;Aeronave&gt;" style="endArrow=open;dashed=1;endFill=0;html=1;rounded=0;strokeWidth=1.5;strokeColor=#e63946;fontColor=#e63946;labelBackgroundColor=#ffffff;verticalAlign=bottom;edgeStyle=orthogonalEdgeStyle;align=center;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="555" y="360" as="sourcePoint"/>
+            <mxPoint x="315" y="360" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m8" value="8. Exibe listagem formatada" style="endArrow=open;dashed=1;endFill=0;html=1;rounded=0;strokeWidth=1.5;strokeColor=#e63946;fontColor=#e63946;labelBackgroundColor=#ffffff;verticalAlign=bottom;edgeStyle=orthogonalEdgeStyle;align=center;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="305" y="420" as="sourcePoint"/>
+            <mxPoint x="95" y="420" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="page-seq-cadastro" name="4. Seq - Cadastro Aeronave">
+    <mxGraphModel dx="1000" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0" background="#ffffff">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="act" value="Operador" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#e9ecef;strokeColor=#343a40;strokeWidth=1.5;fontColor=#343a40;" vertex="1" parent="1">
+          <mxGeometry x="80" y="80" width="30" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="act-line" value="" style="endArrow=none;dashed=1;html=1;rounded=0;strokeColor=#495057;strokeWidth=1.5;" edge="1" parent="1">
+          <mxGeometry x="95" y="140" width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="95" y="140" as="sourcePoint"/>
+            <mxPoint x="95" y="600" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ui" value="InterfaceUsuario
+(Console)" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;fillColor=#e8f4fd;strokeColor=#1d3557;strokeWidth=1.5;fontColor=#1d3557;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="260" y="80" width="100" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="srv" value="AeronaveService" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;fillColor=#f1faee;strokeColor=#457b9d;strokeWidth=1.5;fontColor=#1d3557;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="500" y="80" width="120" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="dao" value="AeronaveDAO" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;fillColor=#fae1df;strokeColor=#e63946;strokeWidth=1.5;fontColor=#1d3557;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="760" y="80" width="110" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="db" value="MariaDB" style="shape=cylinder;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#fdf0d5;strokeColor=#669bbc;strokeWidth=1.5;fontColor=#003049;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="980" y="80" width="100" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="db-line" value="" style="endArrow=none;dashed=1;html=1;rounded=0;strokeColor=#495057;strokeWidth=1.5;" edge="1" parent="1">
+          <mxGeometry x="1030" y="130" width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1030" y="130" as="sourcePoint"/>
+            <mxPoint x="1030" y="600" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a-ui" value="" style="whiteSpace=wrap;html=1;fillColor=#f8f9fa;strokeColor=#343a40;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="305" y="140" width="10" height="380" as="geometry"/>
+        </mxCell>
+        <mxCell id="a-srv" value="" style="whiteSpace=wrap;html=1;fillColor=#f8f9fa;strokeColor=#343a40;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="555" y="170" width="10" height="310" as="geometry"/>
+        </mxCell>
+        <mxCell id="a-dao" value="" style="whiteSpace=wrap;html=1;fillColor=#f8f9fa;strokeColor=#343a40;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="810" y="260" width="10" height="140" as="geometry"/>
+        </mxCell>
+        <mxCell id="m1" value="1. Informa dados" style="endArrow=block;html=1;rounded=0;strokeWidth=1.5;strokeColor=#1d3557;fontColor=#1d3557;labelBackgroundColor=#ffffff;verticalAlign=bottom;edgeStyle=orthogonalEdgeStyle;align=center;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="95" y="140" as="sourcePoint"/>
+            <mxPoint x="305" y="140" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m2" value="2. salvarAeronave()" style="endArrow=block;html=1;rounded=0;strokeWidth=1.5;strokeColor=#1d3557;fontColor=#1d3557;labelBackgroundColor=#ffffff;verticalAlign=bottom;edgeStyle=orthogonalEdgeStyle;align=center;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="315" y="170" as="sourcePoint"/>
+            <mxPoint x="555" y="170" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m3" value="3. Validar Regras" style="endArrow=block;html=1;rounded=0;strokeWidth=1.5;strokeColor=#1d3557;fontColor=#1d3557;labelBackgroundColor=#ffffff;verticalAlign=bottom;edgeStyle=orthogonalEdgeStyle;align=center;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="555" y="200" as="sourcePoint"/>
+            <mxPoint x="555" y="200" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m4" value="4. inserir()" style="endArrow=block;html=1;rounded=0;strokeWidth=1.5;strokeColor=#1d3557;fontColor=#1d3557;labelBackgroundColor=#ffffff;verticalAlign=bottom;edgeStyle=orthogonalEdgeStyle;align=center;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="565" y="260" as="sourcePoint"/>
+            <mxPoint x="810" y="260" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m5" value="5. INSERT INTO aeronave" style="endArrow=block;html=1;rounded=0;strokeWidth=1.5;strokeColor=#1d3557;fontColor=#1d3557;labelBackgroundColor=#ffffff;verticalAlign=bottom;edgeStyle=orthogonalEdgeStyle;align=center;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="820" y="290" as="sourcePoint"/>
+            <mxPoint x="1030" y="290" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m6" value="6. Sucesso (ID)" style="endArrow=open;dashed=1;endFill=0;html=1;rounded=0;strokeWidth=1.5;strokeColor=#e63946;fontColor=#e63946;labelBackgroundColor=#ffffff;verticalAlign=bottom;edgeStyle=orthogonalEdgeStyle;align=center;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1030" y="330" as="sourcePoint"/>
+            <mxPoint x="820" y="330" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m7" value="7. Retorna ID" style="endArrow=open;dashed=1;endFill=0;html=1;rounded=0;strokeWidth=1.5;strokeColor=#e63946;fontColor=#e63946;labelBackgroundColor=#ffffff;verticalAlign=bottom;edgeStyle=orthogonalEdgeStyle;align=center;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="810" y="360" as="sourcePoint"/>
+            <mxPoint x="565" y="360" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m8" value="8. Retorna Sucesso" style="endArrow=open;dashed=1;endFill=0;html=1;rounded=0;strokeWidth=1.5;strokeColor=#e63946;fontColor=#e63946;labelBackgroundColor=#ffffff;verticalAlign=bottom;edgeStyle=orthogonalEdgeStyle;align=center;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="555" y="400" as="sourcePoint"/>
+            <mxPoint x="315" y="400" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m9" value="9. Exibe confirmação" style="endArrow=open;dashed=1;endFill=0;html=1;rounded=0;strokeWidth=1.5;strokeColor=#e63946;fontColor=#e63946;labelBackgroundColor=#ffffff;verticalAlign=bottom;edgeStyle=orthogonalEdgeStyle;align=center;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="305" y="460" as="sourcePoint"/>
+            <mxPoint x="95" y="460" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="page-seq-reserva" name="5. Seq - Efetuar Reserva">
+    <mxGraphModel dx="1000" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0" background="#ffffff">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="act" value="Operador" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#e9ecef;strokeColor=#343a40;strokeWidth=1.5;fontColor=#343a40;" vertex="1" parent="1">
+          <mxGeometry x="60" y="80" width="30" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="act-line" value="" style="endArrow=none;dashed=1;html=1;rounded=0;strokeColor=#495057;strokeWidth=1.5;" edge="1" parent="1">
+          <mxGeometry x="75" y="140" width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="75" y="140" as="sourcePoint"/>
+            <mxPoint x="75" y="600" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ui" value="InterfaceUsuario
+(Console)" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;fillColor=#e8f4fd;strokeColor=#1d3557;strokeWidth=1.5;fontColor=#1d3557;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="200" y="80" width="100" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="srv" value="ReservaService" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;fillColor=#f1faee;strokeColor=#457b9d;strokeWidth=1.5;fontColor=#1d3557;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="380" y="80" width="120" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="passdao" value="PassageiroDAO" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;fillColor=#fae1df;strokeColor=#e63946;strokeWidth=1.5;fontColor=#1d3557;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="580" y="80" width="110" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="voodao" value="VooDAO" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;fillColor=#fae1df;strokeColor=#e63946;strokeWidth=1.5;fontColor=#1d3557;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="760" y="80" width="100" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="resdao" value="ReservaDAO" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;fillColor=#fae1df;strokeColor=#e63946;strokeWidth=1.5;fontColor=#1d3557;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="920" y="80" width="100" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="db" value="MariaDB" style="shape=cylinder;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#fdf0d5;strokeColor=#669bbc;strokeWidth=1.5;fontColor=#003049;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="1060" y="80" width="80" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="db-line" value="" style="endArrow=none;dashed=1;html=1;rounded=0;strokeColor=#495057;strokeWidth=1.5;" edge="1" parent="1">
+          <mxGeometry x="1100" y="130" width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1100" y="130" as="sourcePoint"/>
+            <mxPoint x="1100" y="600" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a-ui" value="" style="whiteSpace=wrap;html=1;fillColor=#f8f9fa;strokeColor=#343a40;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="245" y="130" width="10" height="430" as="geometry"/>
+        </mxCell>
+        <mxCell id="a-srv" value="" style="whiteSpace=wrap;html=1;fillColor=#f8f9fa;strokeColor=#343a40;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="435" y="160" width="10" height="360" as="geometry"/>
+        </mxCell>
+        <mxCell id="a-pdao" value="" style="whiteSpace=wrap;html=1;fillColor=#f8f9fa;strokeColor=#343a40;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="630" y="190" width="10" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="a-vdao" value="" style="whiteSpace=wrap;html=1;fillColor=#f8f9fa;strokeColor=#343a40;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="805" y="260" width="10" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="a-rdao" value="" style="whiteSpace=wrap;html=1;fillColor=#f8f9fa;strokeColor=#343a40;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="965" y="330" width="10" height="150" as="geometry"/>
+        </mxCell>
+        <mxCell id="m1" value="1. Solicita reserva" style="endArrow=block;html=1;rounded=0;strokeWidth=1.5;strokeColor=#1d3557;fontColor=#1d3557;labelBackgroundColor=#ffffff;verticalAlign=bottom;edgeStyle=orthogonalEdgeStyle;align=center;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="75" y="130" as="sourcePoint"/>
+            <mxPoint x="245" y="130" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m2" value="2. processarReserva()" style="endArrow=block;html=1;rounded=0;strokeWidth=1.5;strokeColor=#1d3557;fontColor=#1d3557;labelBackgroundColor=#ffffff;verticalAlign=bottom;edgeStyle=orthogonalEdgeStyle;align=center;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="255" y="160" as="sourcePoint"/>
+            <mxPoint x="435" y="160" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m3" value="3. buscarPorId(idPass)" style="endArrow=block;html=1;rounded=0;strokeWidth=1.5;strokeColor=#1d3557;fontColor=#1d3557;labelBackgroundColor=#ffffff;verticalAlign=bottom;edgeStyle=orthogonalEdgeStyle;align=center;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="445" y="190" as="sourcePoint"/>
+            <mxPoint x="630" y="190" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m4" value="3.1 SELECT passageiro" style="endArrow=block;html=1;rounded=0;strokeWidth=1.5;strokeColor=#1d3557;fontColor=#1d3557;labelBackgroundColor=#ffffff;verticalAlign=bottom;edgeStyle=orthogonalEdgeStyle;align=center;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="640" y="210" as="sourcePoint"/>
+            <mxPoint x="1100" y="210" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m5" value="3.2 Retorna Passageiro" style="endArrow=open;dashed=1;endFill=0;html=1;rounded=0;strokeWidth=1.5;strokeColor=#e63946;fontColor=#e63946;labelBackgroundColor=#ffffff;verticalAlign=bottom;edgeStyle=orthogonalEdgeStyle;align=center;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="630" y="230" as="sourcePoint"/>
+            <mxPoint x="445" y="230" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m6" value="4. buscarPorCodigo(voo)" style="endArrow=block;html=1;rounded=0;strokeWidth=1.5;strokeColor=#1d3557;fontColor=#1d3557;labelBackgroundColor=#ffffff;verticalAlign=bottom;edgeStyle=orthogonalEdgeStyle;align=center;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="445" y="260" as="sourcePoint"/>
+            <mxPoint x="805" y="260" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m7" value="4.1 SELECT voo" style="endArrow=block;html=1;rounded=0;strokeWidth=1.5;strokeColor=#1d3557;fontColor=#1d3557;labelBackgroundColor=#ffffff;verticalAlign=bottom;edgeStyle=orthogonalEdgeStyle;align=center;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="815" y="280" as="sourcePoint"/>
+            <mxPoint x="1100" y="280" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m8" value="4.2 Retorna Voo" style="endArrow=open;dashed=1;endFill=0;html=1;rounded=0;strokeWidth=1.5;strokeColor=#e63946;fontColor=#e63946;labelBackgroundColor=#ffffff;verticalAlign=bottom;edgeStyle=orthogonalEdgeStyle;align=center;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="805" y="300" as="sourcePoint"/>
+            <mxPoint x="445" y="300" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m9" value="5. isAssentoOcupado()" style="endArrow=block;html=1;rounded=0;strokeWidth=1.5;strokeColor=#1d3557;fontColor=#1d3557;labelBackgroundColor=#ffffff;verticalAlign=bottom;edgeStyle=orthogonalEdgeStyle;align=center;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="445" y="330" as="sourcePoint"/>
+            <mxPoint x="965" y="330" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m10" value="5.1 SELECT COUNT reserva" style="endArrow=block;html=1;rounded=0;strokeWidth=1.5;strokeColor=#1d3557;fontColor=#1d3557;labelBackgroundColor=#ffffff;verticalAlign=bottom;edgeStyle=orthogonalEdgeStyle;align=center;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="975" y="350" as="sourcePoint"/>
+            <mxPoint x="1100" y="350" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m11" value="5.2 false (Livre)" style="endArrow=open;dashed=1;endFill=0;html=1;rounded=0;strokeWidth=1.5;strokeColor=#e63946;fontColor=#e63946;labelBackgroundColor=#ffffff;verticalAlign=bottom;edgeStyle=orthogonalEdgeStyle;align=center;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="965" y="370" as="sourcePoint"/>
+            <mxPoint x="445" y="370" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m12" value="6. inserirReserva()" style="endArrow=block;html=1;rounded=0;strokeWidth=1.5;strokeColor=#1d3557;fontColor=#1d3557;labelBackgroundColor=#ffffff;verticalAlign=bottom;edgeStyle=orthogonalEdgeStyle;align=center;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="445" y="400" as="sourcePoint"/>
+            <mxPoint x="965" y="400" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m13" value="6.1 INSERT reserva" style="endArrow=block;html=1;rounded=0;strokeWidth=1.5;strokeColor=#1d3557;fontColor=#1d3557;labelBackgroundColor=#ffffff;verticalAlign=bottom;edgeStyle=orthogonalEdgeStyle;align=center;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="975" y="420" as="sourcePoint"/>
+            <mxPoint x="1100" y="420" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m14" value="6.2 Confirmado" style="endArrow=open;dashed=1;endFill=0;html=1;rounded=0;strokeWidth=1.5;strokeColor=#e63946;fontColor=#e63946;labelBackgroundColor=#ffffff;verticalAlign=bottom;edgeStyle=orthogonalEdgeStyle;align=center;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="965" y="440" as="sourcePoint"/>
+            <mxPoint x="445" y="440" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m15" value="7. Sucesso" style="endArrow=open;dashed=1;endFill=0;html=1;rounded=0;strokeWidth=1.5;strokeColor=#e63946;fontColor=#e63946;labelBackgroundColor=#ffffff;verticalAlign=bottom;edgeStyle=orthogonalEdgeStyle;align=center;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="435" y="470" as="sourcePoint"/>
+            <mxPoint x="255" y="470" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m16" value="8. Exibe mensagem" style="endArrow=open;dashed=1;endFill=0;html=1;rounded=0;strokeWidth=1.5;strokeColor=#e63946;fontColor=#e63946;labelBackgroundColor=#ffffff;verticalAlign=bottom;edgeStyle=orthogonalEdgeStyle;align=center;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="245" y="510" as="sourcePoint"/>
+            <mxPoint x="75" y="510" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
