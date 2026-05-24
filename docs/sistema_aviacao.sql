@@ -41,7 +41,7 @@ CREATE TABLE `aeronave` (
 --
 
 INSERT INTO `aeronave` (`id_aeronave`, `modelo`, `capacidade`, `envergadura`, `fabricante`, `status_ativo`) VALUES
-(0, 'Boeing 737-300', 180, 90, 'Boeing', 'S'),
+(100, 'Boeing 737-300', 180, 90, 'Boeing', 'S'),
 (1, '737-300', 180, 90, 'BOEING', 'A'),
 (2, '777-400', 350, 120, 'BOEING', 'A'),
 (3, 'Boeing 787-9 Dreamliner', 290, 118, 'Boeing', 'S'),
@@ -69,7 +69,7 @@ CREATE TABLE `aeronave_cia` (
 --
 
 INSERT INTO `aeronave_cia` (`id_aeronave`, `id_cia`, `data_aquisicao`) VALUES
-(0, 11110, '2018-03-10'),
+(100, 11110, '2018-03-10'),
 (1, 11111, '2019-06-15'),
 (2, 11112, '2020-01-20'),
 (3, 11113, '2021-08-05'),
@@ -158,7 +158,7 @@ CREATE TABLE `passageiro` (
 --
 
 INSERT INTO `passageiro` (`id_passageiro`, `nome`, `email`, `tel`, `dt_nasc`) VALUES
-(0, 'Caio Marcio', 'caio@email.com', '21965399168', '1993-03-08'),
+(100, 'Caio Marcio', 'caio@email.com', '21965399168', '1993-03-08'),
 (1, 'Rog?rio Bailly', 'bailly@email.com', '21959875636', '1057-03-25'),
 (2, 'Raffos', 'raffos@email.com', '21942659875', '1997-04-25'),
 (3, 'Ana Lima', 'Ana@email.com', '21945626987', '2000-12-11'),
@@ -188,7 +188,7 @@ CREATE TABLE `reserva` (
 --
 
 INSERT INTO `reserva` (`cod_reserva`, `id_passageiro`, `cod_voo`, `assento`, `dt_reserva`) VALUES
-('R000', 0, 'G31001', '12A', '2026-03-25'),
+('R000', 100, 'G31001', '12A', '2026-03-25'),
 ('R001', 1, 'LA2002', '14B', '2026-03-25'),
 ('R002', 2, 'AZ3003', '08C', '2026-03-25'),
 ('R003', 3, 'VP4004', '16D', '2026-03-25'),
