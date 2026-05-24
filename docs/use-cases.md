@@ -18,6 +18,12 @@
 
 ---
 
+## Diagrama de Casos de Uso
+
+![Diagrama de Casos de Uso](images/diagrama-casos-de-uso.png)
+
+---
+
 ## UC-01 — Gerenciar Aeronaves
 
 **Ator Principal:** Operador
@@ -52,62 +58,12 @@
 **Regras de Negócio:** RN-01 a RN-04
 
 **Diagrama de Sequência — Consulta Geral de Aeronaves:**
-```mermaid
-sequenceDiagram
-    autonumber
-    actor Operador as Operador
-    participant UI as InterfaceUsuario
-    participant Service as AeronaveService
-    participant DAO as AeronaveDAO
-    participant DB as Banco MariaDB
 
-    Operador->>UI: Seleciona "Consultar Frota"
-    activate UI
-    UI->>Service: listarTodas()
-    activate Service
-    Service->>DAO: buscarTodas()
-    activate DAO
-    DAO->>DB: SELECT * FROM aeronave
-    activate DB
-    DB-->>DAO: ResultSet com os dados
-    deactivate DB
-    DAO->>DAO: Mapeia ResultSet para List&lt;Aeronave&gt;
-    DAO-->>Service: List&lt;Aeronave&gt;
-    deactivate DAO
-    Service-->>UI: List&lt;Aeronave&gt;
-    deactivate Service
-    UI->>Operador: Exibe listagem formatada
-    deactivate UI
-```
+![Seq - Consulta Geral de Aeronaves](images/seq-consulta-geral-aeronaves.png)
 
 **Diagrama de Sequência — Cadastro de Aeronave:**
-```mermaid
-sequenceDiagram
-    autonumber
-    actor Operador as Operador
-    participant UI as InterfaceUsuario
-    participant Service as AeronaveService
-    participant DAO as AeronaveDAO
-    participant DB as Banco MariaDB
 
-    Operador->>UI: Informa dados (modelo, capacidade, envergadura, fabricante, ativo)
-    activate UI
-    UI->>Service: salvarAeronave(pojo)
-    activate Service
-    Service->>Service: Validar RN-01 a RN-03
-    Service->>DAO: inserir(pojo)
-    activate DAO
-    DAO->>DB: INSERT INTO aeronave (modelo, capacidade, ...)
-    activate DB
-    DB-->>DAO: Confirma inserção + ID gerado
-    deactivate DB
-    DAO-->>Service: ID gerado
-    deactivate DAO
-    Service-->>UI: Sucesso com ID
-    deactivate Service
-    UI->>Operador: Confirmação com ID gerado
-    deactivate UI
-```
+![Seq - Cadastro de Aeronave](images/seq-cadastro-aeronave.png)
 
 ---
 
@@ -390,58 +346,8 @@ sequenceDiagram
 **Regras de Negócio:** RN-19 a RN-21
 
 **Diagrama de Sequência:**
-```mermaid
-sequenceDiagram
-    autonumber
-    actor Operador as Operador
-    participant UI as InterfaceUsuario
-    participant Service as ReservaService
-    participant PassDAO as PassageiroDAO
-    participant VooDAO as VooDAO
-    participant ResDAO as ReservaDAO
-    participant DB as Banco MariaDB
 
-    Operador->>UI: Solicita "Efetuar Reserva" e fornece dados
-    activate UI
-    UI->>Service: processarReserva(resPOJO)
-    activate Service
-    Service->>PassDAO: buscarPorId(idPassageiro)
-    activate PassDAO
-    PassDAO->>DB: SELECT * FROM passageiro WHERE id_passageiro = ?
-    activate DB
-    DB-->>PassDAO: Registro
-    deactivate DB
-    PassDAO-->>Service: Objeto Passageiro
-    deactivate PassDAO
-    Service->>VooDAO: buscarPorCodigo(codVoo)
-    activate VooDAO
-    VooDAO->>DB: SELECT * FROM voo WHERE cod_voo = ?
-    activate DB
-    DB-->>VooDAO: Registro do Voo
-    deactivate DB
-    VooDAO-->>Service: Objeto Voo
-    deactivate VooDAO
-    Service->>ResDAO: isAssentoOcupado(codVoo, assento)
-    activate ResDAO
-    ResDAO->>DB: SELECT COUNT(*) FROM reserva WHERE cod_voo = ? AND assento = ?
-    activate DB
-    DB-->>ResDAO: COUNT = 0
-    deactivate DB
-    ResDAO-->>Service: false (Livre)
-    deactivate ResDAO
-    Service->>ResDAO: inserirReserva(resPOJO)
-    activate ResDAO
-    ResDAO->>DB: INSERT INTO reserva
-    activate DB
-    DB-->>ResDAO: Sucesso
-    deactivate DB
-    ResDAO-->>Service: Sucesso
-    deactivate ResDAO
-    Service-->>UI: Sucesso
-    deactivate Service
-    UI->>Operador: "Reserva efetuada com sucesso!"
-    deactivate UI
-```
+![Seq - Efetuar Reserva](images/seq-efetuar-reserva.png)
 
 ---
 
