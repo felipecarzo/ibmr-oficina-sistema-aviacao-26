@@ -1,21 +1,23 @@
-# Sprint Backlog — Sprint B
+# Sprint Backlog
 
-## Objetivo
-Implementar POJOs e DAOs das entidades independentes (Passageiro, Aeroporto, CiaAerea).
+## Sprint C — Entidades Dependentes
 
-## Status: ✅ Concluída
+**Objetivo:** Implementar POJOs e DAOs de Aeronave, AeronaveCia, Voo e Reserva.
+
+**Status:** ✅ Concluída
 
 | Item | Entregue |
 | :--- | :---: |
-| POJO Passageiro | `model/Passageiro.java` |
-| PassageiroDAO (CRUD) | `dao/PassageiroDAO.java` |
-| POJO Aeroporto | `model/Aeroporto.java` |
-| AeroportoDAO (CRUD) | `dao/AeroportoDAO.java` |
-| POJO CiaAerea | `model/CiaAerea.java` |
-| CiaAereaDAO (CRUD) | `dao/CiaAereaDAO.java` |
-| Teste via console | OK |
+| POJO Aeronave | `model/Aeronave.java` |
+| AeronaveDAO | `dao/AeronaveDAO.java` |
+| POJO AeronaveCia | `model/AeronaveCia.java` |
+| AeronaveCiaDAO | `dao/AeronaveCiaDAO.java` |
+| POJO Voo | `model/Voo.java` |
+| VooDAO | `dao/VooDAO.java` |
+| POJO Reserva | `model/Reserva.java` |
+| ReservaDAO | `dao/ReservaDAO.java` |
+| Teste integrado | OK (insert/busca/delete em todos) |
 | `mvn clean compile` | BUILD SUCCESS |
 
-## Impedimentos
-- Banco sem `AUTO_INCREMENT` nas PKs de passageiro, aeroporto, cia_aerea → corrigido via ALTER TABLE.
-- Passageiro com registro `id=0` impedia ALTER → migrado para `id=100`.
+**Impedimentos:**
+- `aeronave` sem `AUTO_INCREMENT` e com `id=0` → migrado para `id=100`, PK alterada.

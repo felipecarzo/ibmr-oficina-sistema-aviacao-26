@@ -258,15 +258,15 @@ Use como seu diário de bordo pessoal.
 **Objetivo:** Implementar POJOs e DAOs de Aeronave, AeronaveCia, Voo e Reserva.
 
 **Backlog da Sprint:**
-- [ ] **SC-01** — Implementar POJO `Aeronave`
-- [ ] **SC-02** — Implementar `AeronaveDAO` (CRUD + buscar por fabricante)
-- [ ] **SC-03** — Implementar POJO `AeronaveCia`
-- [ ] **SC-04** — Implementar `AeronaveCiaDAO` (vínculo + buscas por aeronave/cia)
-- [ ] **SC-05** — Implementar POJO `Voo`
-- [ ] **SC-06** — Implementar `VooDAO` (CRUD + buscar por origem/destino)
-- [ ] **SC-07** — Implementar POJO `Reserva`
-- [ ] **SC-08** — Implementar `ReservaDAO` (insert, delete, findByVoo, findByPassageiro, verificação de assento)
-- [ ] **SC-09** — Testar integridade referencial (FK violada → exceção tratada)
+- [x] **SC-01** — Implementar POJO `Aeronave`
+- [x] **SC-02** — Implementar `AeronaveDAO` (CRUD + buscar por fabricante)
+- [x] **SC-03** — Implementar POJO `AeronaveCia`
+- [x] **SC-04** — Implementar `AeronaveCiaDAO` (vínculo + buscas por aeronave/cia)
+- [x] **SC-05** — Implementar POJO `Voo`
+- [x] **SC-06** — Implementar `VooDAO` (CRUD + buscar por origem/destino)
+- [x] **SC-07** — Implementar POJO `Reserva`
+- [x] **SC-08** — Implementar `ReservaDAO` (insert, delete, findByVoo, findByPassageiro, verificação de assento)
+- [x] **SC-09** — Testar integridade referencial (FK violada → exceção tratada)
 - [ ] **SC-10** — Testar cada DAO via console
 - [ ] **SC-11** — Registrar impedimentos e aprendizados
 
