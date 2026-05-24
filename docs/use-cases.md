@@ -88,33 +88,8 @@
 **Regras de Negócio:** RN-05 a RN-07
 
 **Diagrama de Sequência — Cadastro de Companhia:**
-```mermaid
-sequenceDiagram
-    autonumber
-    actor Operador as Operador
-    participant UI as InterfaceUsuario
-    participant Service as CiaAereaService
-    participant DAO as CiaAereaDAO
-    participant DB as Banco MariaDB
 
-    Operador->>UI: Informa dados (nome, CNPJ, email, ativo)
-    activate UI
-    UI->>Service: cadastrarCompanhia(pojo)
-    activate Service
-    Service->>Service: Validar CNPJ e Email (RN-05, RN-06)
-    Service->>DAO: inserir(pojo)
-    activate DAO
-    DAO->>DB: INSERT INTO cia_aerea
-    activate DB
-    DB-->>DAO: Confirmação + ID
-    deactivate DB
-    DAO-->>Service: ID
-    deactivate DAO
-    Service-->>UI: Sucesso com ID
-    deactivate Service
-    UI->>Operador: Mensagem de confirmação
-    deactivate UI
-```
+![Seq - Cadastro de Companhia](images/seq-cadastro-companhia.png)
 
 ---
 
@@ -135,33 +110,8 @@ sequenceDiagram
 **Regras de Negócio:** RN-08 a RN-10
 
 **Diagrama de Sequência — Cadastro de Aeroporto:**
-```mermaid
-sequenceDiagram
-    autonumber
-    actor Operador as Operador
-    participant UI as InterfaceUsuario
-    participant Service as AeroportoService
-    participant DAO as AeroportoDAO
-    participant DB as Banco MariaDB
 
-    Operador->>UI: Informa dados (nome, sigla, cidade)
-    activate UI
-    UI->>Service: cadastrarAeroporto(pojo)
-    activate Service
-    Service->>Service: Validar Sigla (RN-08, RN-09)
-    Service->>DAO: inserir(pojo)
-    activate DAO
-    DAO->>DB: INSERT INTO aeroporto
-    activate DB
-    DB-->>DAO: Sucesso
-    deactivate DB
-    DAO-->>Service: Sucesso
-    deactivate DAO
-    Service-->>UI: Sucesso
-    deactivate Service
-    UI->>Operador: "Aeroporto cadastrado com sucesso!"
-    deactivate UI
-```
+![Seq - Cadastro de Aeroporto](images/seq-cadastro-aeroporto.png)
 
 ---
 
@@ -182,33 +132,8 @@ sequenceDiagram
 **Regras de Negócio:** RN-11 a RN-13
 
 **Diagrama de Sequência — Cadastro de Passageiro:**
-```mermaid
-sequenceDiagram
-    autonumber
-    actor Operador as Operador
-    participant UI as InterfaceUsuario
-    participant Service as PassageiroService
-    participant DAO as PassageiroDAO
-    participant DB as Banco MariaDB
 
-    Operador->>UI: Informa dados (nome, email, fone, nascimento)
-    activate UI
-    UI->>Service: cadastrarPassageiro(pojo)
-    activate Service
-    Service->>Service: Validar Email e Fone (RN-11 a RN-13)
-    Service->>DAO: inserir(pojo)
-    activate DAO
-    DAO->>DB: INSERT INTO passageiro
-    activate DB
-    DB-->>DAO: Confirmação + ID
-    deactivate DB
-    DAO-->>Service: ID
-    deactivate DAO
-    Service-->>UI: Sucesso com ID
-    deactivate Service
-    UI->>Operador: Confirmação com ID gerado
-    deactivate UI
-```
+![Seq - Cadastro de Passageiro](images/seq-cadastro-passageiro.png)
 
 ---
 
@@ -233,41 +158,8 @@ sequenceDiagram
 **Regras de Negócio:** RN-14 a RN-16
 
 **Diagrama de Sequência — Cadastro de Voo:**
-```mermaid
-sequenceDiagram
-    autonumber
-    actor Operador as Operador
-    participant UI as InterfaceUsuario
-    participant Service as VooService
-    participant AeroDAO as AeroportoDAO
-    participant VooDAO as VooDAO
-    participant DB as Banco MariaDB
 
-    Operador->>UI: Informa dados (origem, destino, horários, codAeroporto)
-    activate UI
-    UI->>Service: cadastrarVoo(vooPojo)
-    activate Service
-    Service->>AeroDAO: buscarPorCodigo(codAeroporto)
-    activate AeroDAO
-    AeroDAO->>DB: SELECT * FROM aeroporto WHERE cod_aeroporto = ?
-    activate DB
-    DB-->>AeroDAO: Registro encontrado
-    deactivate DB
-    AeroDAO-->>Service: Objeto Aeroporto
-    deactivate AeroDAO
-    Service->>VooDAO: inserir(vooPojo)
-    activate VooDAO
-    VooDAO->>DB: INSERT INTO voo
-    activate DB
-    DB-->>VooDAO: Sucesso
-    deactivate DB
-    VooDAO-->>Service: Sucesso
-    deactivate VooDAO
-    Service-->>UI: Sucesso
-    deactivate Service
-    UI->>Operador: Mensagem de confirmação
-    deactivate UI
-```
+![Seq - Cadastro de Voo](images/seq-cadastro-voo.png)
 
 ---
 
@@ -287,40 +179,8 @@ sequenceDiagram
 **Regras de Negócio:** RN-17 a RN-18
 
 **Diagrama de Sequência — Vincular Aeronave a Companhia:**
-```mermaid
-sequenceDiagram
-    autonumber
-    actor Operador as Operador
-    participant UI as InterfaceUsuario
-    participant Service as AeronaveCiaService
-    participant DAO as AeronaveCiaDAO
-    participant DB as Banco MariaDB
 
-    Operador->>UI: Informa aeronave, cia e data de aquisição
-    activate UI
-    UI->>Service: vincularAeronaveCia(idAeronave, idCia, data)
-    activate Service
-    Service->>DAO: isAeronaveVinculada(idAeronave)
-    activate DAO
-    DAO->>DB: SELECT COUNT(*) FROM aeronave_cia WHERE id_aeronave = ?
-    activate DB
-    DB-->>DAO: COUNT = 0 (Livre)
-    deactivate DB
-    DAO-->>Service: false
-    deactivate DAO
-    Service->>DAO: inserirVinculo(idAeronave, idCia, data)
-    activate DAO
-    DAO->>DB: INSERT INTO aeronave_cia VALUES (?, ?, ?)
-    activate DB
-    DB-->>DAO: Sucesso
-    deactivate DB
-    DAO-->>Service: Sucesso
-    deactivate DAO
-    Service-->>UI: Sucesso
-    deactivate Service
-    UI->>Operador: Confirmação de vínculo
-    deactivate UI
-```
+![Seq - Vincular Aeronave a Companhia](images/seq-vincular-aeronave-cia.png)
 
 ---
 
@@ -370,37 +230,5 @@ sequenceDiagram
 2. Exibe mensagem de erro e retorna ao menu
 
 **Diagrama de Sequência:**
-```mermaid
-sequenceDiagram
-    autonumber
-    actor Operador as Operador
-    participant UI as InterfaceUsuario
-    participant Service as ReservaService
-    participant DAO as ReservaDAO
-    participant DB as Banco MariaDB
 
-    Operador->>UI: Informa codReserva a ser cancelado
-    activate UI
-    UI->>Service: cancelarReserva(codReserva)
-    activate Service
-    Service->>DAO: buscarPorCodigo(codReserva)
-    activate DAO
-    DAO->>DB: SELECT * FROM reserva WHERE cod_reserva = ?
-    activate DB
-    DB-->>DAO: Dados da reserva
-    deactivate DB
-    DAO-->>Service: Objeto Reserva
-    deactivate DAO
-    Service->>DAO: excluir(codReserva)
-    activate DAO
-    DAO->>DB: DELETE FROM reserva WHERE cod_reserva = ?
-    activate DB
-    DB-->>DAO: Sucesso
-    deactivate DB
-    DAO-->>Service: Sucesso
-    deactivate DAO
-    Service-->>UI: Sucesso
-    deactivate Service
-    UI->>Operador: "Reserva cancelada e assento liberado!"
-    deactivate UI
-```
+![Seq - Cancelar Reserva](images/seq-cancelar-reserva.png)
