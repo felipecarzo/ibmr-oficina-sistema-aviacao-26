@@ -1,3 +1,4 @@
+com/aviacao/main/SistemaAviação.class
 com/aviacao/dao/ReservaDAO.class
 com/aviacao/dao/CiaAereaDAO.class
 com/aviacao/model/CiaAerea.class

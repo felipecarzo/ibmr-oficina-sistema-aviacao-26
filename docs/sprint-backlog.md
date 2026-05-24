@@ -1,27 +1,24 @@
 # Sprint Backlog
 
-## Sprint C — Entidades Dependentes (Concluída)
+## Sprint D — Interface (Menu) ✅
 
-**Status:** ✅
+**Arquivo:** `src/main/java/com/aviacao/main/SistemaAviação.java`
 
----
+**Status:** ✅ Concluída
 
-## Fase 5.4 — Service / Validador (Concluída)
+| Funcionalidade | Status |
+| :--- | :---: |
+| Menu principal com navegação | ✅ |
+| Submenu Aeronaves (CRUD) | ✅ |
+| Submenu Companhias (CRUD) | ✅ |
+| Submenu Aeroportos (CRUD) | ✅ |
+| Submenu Passageiros (CRUD) | ✅ |
+| Submenu Voos (CRUD + rota) | ✅ |
+| Vincular Aeronave a Companhia | ✅ |
+| Efetuar Reserva (c/ validação assento) | ✅ |
+| Cancelar Reserva | ✅ |
+| Validações integradas | ✅ |
+| Tratamento de exceções | ✅ |
+| `mvn clean compile` | ✅ |
 
-**Arquivo:** `src/main/java/com/aviacao/service/Validador.java`
-
-| Método | Validação |
-| :--- | :--- |
-| `validarCnpj` | 14 dígitos |
-| `validarEmail` | contém `@` e `.` |
-| `validarSigla` | exatamente 3 letras |
-| `validarTelefone` | 10-11 dígitos |
-| `validarDataNascimento` | não futura |
-| `validarCapacidade` | 1 a 999 |
-| `validarHorario` | 0-2359, minutos < 60 |
-| `validarStatusAtivo` | 'S' ou 'N' |
-| `validarAssento` | padrão número+letra (ex: 12A) |
-
----
-
-## Próximo: Sprint D — Interface (Menu)
+## Próximo: Sprint E — Portabilidade e Polimento

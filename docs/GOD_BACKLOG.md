@@ -281,20 +281,20 @@ Use como seu diário de bordo pessoal.
 **Objetivo:** Construir o menu interativo (console) integrando todos os DAOs.
 
 **Backlog da Sprint:**
-- [ ] **SD-01** — Criar `SistemaAviação.java` com menu principal
-- [ ] **SD-02** — Implementar submenu Gerenciar Aeronaves
-- [ ] **SD-03** — Implementar submenu Gerenciar Companhias
-- [ ] **SD-04** — Implementar submenu Gerenciar Aeroportos
-- [ ] **SD-05** — Implementar submenu Gerenciar Passageiros
-- [ ] **SD-06** — Implementar submenu Gerenciar Voos
-- [ ] **SD-07** — Implementar Vincular Aeronave a Companhia
-- [ ] **SD-08** — Implementar Efetuar Reserva
-- [ ] **SD-09** — Implementar Cancelar Reserva
-- [ ] **SD-10** — Implementar `Validador.java` com todas as validações
-- [ ] **SD-11** — Integrar validações nas entradas do usuário
-- [ ] **SD-12** — Tratar todas as exceções com mensagens amigáveis
-- [ ] **SD-13** — Testar fluxo completo (menu → operação → banco → feedback)
-- [ ] **SD-14** — Registrar impedimentos e aprendizados
+- [x] **SD-01** — Criar `SistemaAviação.java` com menu principal
+- [x] **SD-02** — Implementar submenu Gerenciar Aeronaves
+- [x] **SD-03** — Implementar submenu Gerenciar Companhias
+- [x] **SD-04** — Implementar submenu Gerenciar Aeroportos
+- [x] **SD-05** — Implementar submenu Gerenciar Passageiros
+- [x] **SD-06** — Implementar submenu Gerenciar Voos
+- [x] **SD-07** — Implementar Vincular Aeronave a Companhia
+- [x] **SD-08** — Implementar Efetuar Reserva
+- [x] **SD-09** — Implementar Cancelar Reserva
+- [x] **SD-10** — Implementar `Validador.java` com todas as validações
+- [x] **SD-11** — Integrar validações nas entradas do usuário
+- [x] **SD-12** — Tratar todas as exceções com mensagens amigáveis
+- [x] **SD-13** — Testar fluxo completo (menu → operação → banco → feedback)
+- [x] **SD-14** — Registrar impedimentos e aprendizados
 
 **DoD da Sprint:** MVP funcional de ponta a ponta no ambiente Linux.
 
@@ -457,18 +457,18 @@ public class XxxDAO {
 
 **Arquivo:** `src/main/java/com/aviacao/main/SistemaAviação.java`
 
-- [ ] **5.5.1** — Criar classe com `Scanner`, instâncias dos DAOs, método `main()`
-- [ ] **5.5.2** — `iniciar()` — loop infinito até opção 0
-- [ ] **5.5.3** — `exibirMenu()` — imprime o menu principal
-- [ ] **5.5.4** — `gerenciarAeronaves()` → submenu com Cadastrar / Listar / Buscar ID / Atualizar / Excluir
-- [ ] **5.5.5** — `gerenciarCompanhias()` → submenu análogo
-- [ ] **5.5.6** — `gerenciarAeroportos()` → submenu análogo
-- [ ] **5.5.7** — `gerenciarPassageiros()` → submenu análogo
-- [ ] **5.5.8** — `gerenciarVoos()` → submenu análogo + filtros origem/destino
-- [ ] **5.5.9** — `vincularAeronaveCia()` → ler IDs + data, validar, inserir
-- [ ] **5.5.10** — `efetuarReserva()` → ler dados, verificar assento, inserir
-- [ ] **5.5.11** — `cancelarReserva()` → ler código, confirmar, deletar
-- [ ] **5.5.12** — Tratar `InputMismatchException` (entrada inválida do usuário)
+- [x] **5.5.1** — Criar classe com `Scanner`, instâncias dos DAOs, método `main()`
+- [x] **5.5.2** — `iniciar()` — loop infinito até opção 0
+- [x] **5.5.3** — `exibirMenu()` — imprime o menu principal
+- [x] **5.5.4** — `gerenciarAeronaves()` → submenu com Cadastrar / Listar / Buscar ID / Atualizar / Excluir
+- [x] **5.5.5** — `gerenciarCompanhias()` → submenu análogo
+- [x] **5.5.6** — `gerenciarAeroportos()` → submenu análogo
+- [x] **5.5.7** — `gerenciarPassageiros()` → submenu análogo
+- [x] **5.5.8** — `gerenciarVoos()` → submenu análogo + filtros origem/destino
+- [x] **5.5.9** — `vincularAeronaveCia()` → ler IDs + data, validar, inserir
+- [x] **5.5.10** — `efetuarReserva()` → ler dados, verificar assento, inserir
+- [x] **5.5.11** — `cancelarReserva()` → ler código, confirmar, deletar
+- [x] **5.5.12** — Tratar `InputMismatchException` (entrada inválida do usuário)
 - [ ] **5.5.13** — Tratar `SQLIntegrityConstraintViolationException` (FK violada)
 - [ ] **5.5.14** — Tratar `SQLException` genérica com mensagem amigável
 
