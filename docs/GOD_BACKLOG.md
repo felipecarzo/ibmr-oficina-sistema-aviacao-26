@@ -162,6 +162,8 @@ Use como seu diário de bordo pessoal.
 
 ## PARTE 3 — PRODUCT BACKLOG (Estoque de Funcionalidades)
 
+> ✅ Concluído. 13 user stories documentadas em `docs/product-backlog.md`.
+
 *Todas as histórias que o sistema precisa contar.*
 
 ### 3.1 User Stories
