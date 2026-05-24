@@ -1,23 +1,27 @@
 # Sprint Backlog
 
-## Sprint C — Entidades Dependentes
+## Sprint C — Entidades Dependentes (Concluída)
 
-**Objetivo:** Implementar POJOs e DAOs de Aeronave, AeronaveCia, Voo e Reserva.
+**Status:** ✅
 
-**Status:** ✅ Concluída
+---
 
-| Item | Entregue |
-| :--- | :---: |
-| POJO Aeronave | `model/Aeronave.java` |
-| AeronaveDAO | `dao/AeronaveDAO.java` |
-| POJO AeronaveCia | `model/AeronaveCia.java` |
-| AeronaveCiaDAO | `dao/AeronaveCiaDAO.java` |
-| POJO Voo | `model/Voo.java` |
-| VooDAO | `dao/VooDAO.java` |
-| POJO Reserva | `model/Reserva.java` |
-| ReservaDAO | `dao/ReservaDAO.java` |
-| Teste integrado | OK (insert/busca/delete em todos) |
-| `mvn clean compile` | BUILD SUCCESS |
+## Fase 5.4 — Service / Validador (Concluída)
 
-**Impedimentos:**
-- `aeronave` sem `AUTO_INCREMENT` e com `id=0` → migrado para `id=100`, PK alterada.
+**Arquivo:** `src/main/java/com/aviacao/service/Validador.java`
+
+| Método | Validação |
+| :--- | :--- |
+| `validarCnpj` | 14 dígitos |
+| `validarEmail` | contém `@` e `.` |
+| `validarSigla` | exatamente 3 letras |
+| `validarTelefone` | 10-11 dígitos |
+| `validarDataNascimento` | não futura |
+| `validarCapacidade` | 1 a 999 |
+| `validarHorario` | 0-2359, minutos < 60 |
+| `validarStatusAtivo` | 'S' ou 'N' |
+| `validarAssento` | padrão número+letra (ex: 12A) |
+
+---
+
+## Próximo: Sprint D — Interface (Menu)

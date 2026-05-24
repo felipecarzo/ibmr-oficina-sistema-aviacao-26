@@ -5,8 +5,8 @@ com/aviacao/dao/AeronaveDAO.class
 com/aviacao/model/Aeronave.class
 com/aviacao/model/Voo.class
 com/aviacao/model/Passageiro.class
-com/aviacao/main/TesteSprintC.class
 com/aviacao/model/AeronaveCia.class
+com/aviacao/service/Validador.class
 com/aviacao/dao/AeronaveCiaDAO.class
 com/aviacao/dao/AeroportoDAO.class
 com/aviacao/dao/VooDAO.class

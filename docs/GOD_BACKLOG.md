@@ -443,15 +443,15 @@ public class XxxDAO {
 
 **Arquivo:** `src/main/java/com/aviacao/service/Validador.java`
 
-- [ ] `static boolean validarCnpj(String cnpj)` — verifica 14 dígitos
-- [ ] `static boolean validarEmail(String email)` — contém '@' e domínio
-- [ ] `static boolean validarSigla(String sigla)` — exatamente 3 letras
-- [ ] `static boolean validarTelefone(String tel)` — 10-11 dígitos
-- [ ] `static boolean validarDataNascimento(LocalDate dt)` — não futura
-- [ ] `static boolean validarCapacidade(int cap)` — 1 a 999
-- [ ] `static boolean validarHorario(int hora)` — 0 a 2359
-- [ ] `static boolean validarStatusAtivo(char status)` — 'S' ou 'N'
-- [ ] `static boolean validarAssento(String assento)` — padrão: número + letra (ex: 12A)
+- [x] `static boolean validarCnpj(String cnpj)` — verifica 14 dígitos
+- [x] `static boolean validarEmail(String email)` — contém '@' e domínio
+- [x] `static boolean validarSigla(String sigla)` — exatamente 3 letras
+- [x] `static boolean validarTelefone(String tel)` — 10-11 dígitos
+- [x] `static boolean validarDataNascimento(LocalDate dt)` — não futura
+- [x] `static boolean validarCapacidade(int cap)` — 1 a 999
+- [x] `static boolean validarHorario(int hora)` — 0 a 2359
+- [x] `static boolean validarStatusAtivo(char status)` — 'S' ou 'N'
+- [x] `static boolean validarAssento(String assento)` — padrão: número + letra (ex: 12A)
 
 ### Fase 5.5 — Interface (Menu)
 
