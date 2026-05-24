@@ -1,2 +1,7 @@
+com/aviacao/model/Passageiro.class
+com/aviacao/dao/CiaAereaDAO.class
+com/aviacao/dao/AeroportoDAO.class
+com/aviacao/model/CiaAerea.class
+com/aviacao/dao/PassageiroDAO.class
+com/aviacao/model/Aeroporto.class
 com/aviacao/dao/ConnectionFactory.class
-com/aviacao/main/TesteConexao.class

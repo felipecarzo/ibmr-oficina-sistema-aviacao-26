@@ -1,2 +1,8 @@
+/home/felipe/Projetos/Estudo/proj_sistemaAviacao/src/main/java/com/aviacao/main/TesteDAOs.java
+/home/felipe/Projetos/Estudo/proj_sistemaAviacao/src/main/java/com/aviacao/dao/AeroportoDAO.java
+/home/felipe/Projetos/Estudo/proj_sistemaAviacao/src/main/java/com/aviacao/model/CiaAerea.java
+/home/felipe/Projetos/Estudo/proj_sistemaAviacao/src/main/java/com/aviacao/model/Aeroporto.java
 /home/felipe/Projetos/Estudo/proj_sistemaAviacao/src/main/java/com/aviacao/dao/ConnectionFactory.java
-/home/felipe/Projetos/Estudo/proj_sistemaAviacao/src/main/java/com/aviacao/main/TesteConexao.java
+/home/felipe/Projetos/Estudo/proj_sistemaAviacao/src/main/java/com/aviacao/dao/PassageiroDAO.java
+/home/felipe/Projetos/Estudo/proj_sistemaAviacao/src/main/java/com/aviacao/model/Passageiro.java
+/home/felipe/Projetos/Estudo/proj_sistemaAviacao/src/main/java/com/aviacao/dao/CiaAereaDAO.java

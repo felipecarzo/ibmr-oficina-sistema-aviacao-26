@@ -1,23 +1,21 @@
-# Sprint Backlog
+# Sprint Backlog — Sprint B
 
-| Documento | Sprint Backlog (vivo) |
-| :--- | :--- |
-| **Sprint** | — |
-| **Período** | — |
-| **Objetivo** | — |
+## Objetivo
+Implementar POJOs e DAOs das entidades independentes (Passageiro, Aeroporto, CiaAerea).
 
----
+## Status: ✅ Concluída
 
-## Itens da Sprint
+| Item | Entregue |
+| :--- | :---: |
+| POJO Passageiro | `model/Passageiro.java` |
+| PassageiroDAO (CRUD) | `dao/PassageiroDAO.java` |
+| POJO Aeroporto | `model/Aeroporto.java` |
+| AeroportoDAO (CRUD) | `dao/AeroportoDAO.java` |
+| POJO CiaAerea | `model/CiaAerea.java` |
+| CiaAereaDAO (CRUD) | `dao/CiaAereaDAO.java` |
+| Teste via console | OK |
+| `mvn clean compile` | BUILD SUCCESS |
 
-| ID | Descrição | Responsável | Status |
-| :--- | :--- | :--- | :--- |
-| | | | |
-
-**Legenda:** 🔴 Pendente | 🟡 Em andamento | ✅ Concluído | ❌ Bloqueado
-
----
-
-## Notas e Impedimentos
-
-_Registre aqui qualquer bloqueio ou decisão tomada durante a sprint._
+## Impedimentos
+- Banco sem `AUTO_INCREMENT` nas PKs de passageiro, aeroporto, cia_aerea → corrigido via ALTER TABLE.
+- Passageiro com registro `id=0` impedia ALTER → migrado para `id=100`.

@@ -237,15 +237,15 @@ Use como seu diário de bordo pessoal.
 **Objetivo:** Implementar POJOs e DAOs de Passageiro, Aeroporto e CiaAerea.
 
 **Backlog da Sprint:**
-- [ ] **SB-01** — Implementar POJO `Passageiro`
-- [ ] **SB-02** — Implementar `PassageiroDAO` (CRUD)
-- [ ] **SB-03** — Implementar POJO `Aeroporto`
-- [ ] **SB-04** — Implementar `AeroportoDAO` (CRUD)
-- [ ] **SB-05** — Implementar POJO `CiaAerea`
-- [ ] **SB-06** — Implementar `CiaAereaDAO` (CRUD)
-- [ ] **SB-07** — Testar cada DAO via console (main temporária)
-- [ ] **SB-08** — Verificar dados no phpMyAdmin após inserts
-- [ ] **SB-09** — Registrar impedimentos e aprendizados
+- [x] **SB-01** — Implementar POJO `Passageiro`
+- [x] **SB-02** — Implementar `PassageiroDAO` (CRUD)
+- [x] **SB-03** — Implementar POJO `Aeroporto`
+- [x] **SB-04** — Implementar `AeroportoDAO` (CRUD)
+- [x] **SB-05** — Implementar POJO `CiaAerea`
+- [x] **SB-06** — Implementar `CiaAereaDAO` (CRUD)
+- [x] **SB-07** — Testar cada DAO via console (main temporária)
+- [x] **SB-08** — Verificar dados no phpMyAdmin após inserts
+- [x] **SB-09** — Registrar impedimentos e aprendizados
 
 **DoD da Sprint:** 3 entidades com CRUD funcionando e testado.
 
