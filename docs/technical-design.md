@@ -2,8 +2,8 @@
 
 | Documento | Technical Design |
 | :--- | :--- |
-| **Versão** | 1.0 |
-| **Padrão Arquitetural** | DAO / Service / Console |
+| **Versão** | 1.1 |
+| **Padrão Arquitetural** | DAO / Service / GUI (Swing) |
 
 ---
 
@@ -11,7 +11,7 @@
 
 ```
  ┌─────────────────────────────────────┐
- │         Interface do Usuário        │  ← Console (Menu textual)
+ │         Interface do Usuário        │  ← Java Swing (GUI)
  ├─────────────────────────────────────┤
  │           Camada de Serviço         │  ← Validador.java (regras de negócio)
  ├─────────────────────────────────────┤
@@ -24,7 +24,7 @@
 **Fluxo de chamada:**
 
 ```
-[Menu] → [Service/Validador] → [DAO] → [ConnectionFactory] → [MariaDB]
+[GUI/Swing] → [Service/Validador] → [DAO] → [ConnectionFactory] → [MariaDB]
 ```
 
 ---
@@ -39,6 +39,11 @@ sistema-aviacao/
     └── com/aviacao/
         ├── main/
         │   └── SistemaAviação.java
+        ├── gui/
+        │   ├── MainFrame.java
+        │   ├── CrudPanel.java
+        │   ├── FormDialog.java
+        │   └── CampoFormulario.java
         ├── model/
         │   ├── Aeronave.java
         │   ├── CiaAerea.java
@@ -129,3 +134,33 @@ sistema-aviacao/
 | **Integridade Referencial** | FK sempre aponta para registro existente |
 | **Singleton** | Padrão de projeto com instância única (ConnectionFactory) |
 | **Try-with-resources** | Bloco Java que fecha recursos automaticamente |
+
+---
+
+## 8. Camada GUI (Swing)
+
+A interface gráfica substitui o console como camada de apresentação, usando Java Swing (nativo do JDK, sem dependências externas).
+
+### Componentes
+
+| Classe | Função |
+| :--- | :--- |
+| `MainFrame` | JFrame principal com JTabbedPane (uma aba por entidade) |
+| `CrudPanel` | JPanel reutilizável com JTable + botões Cadastrar/Editar/Excluir |
+| `FormDialog` | JDialog modal que gera formulários dinâmicos a partir de `CampoFormulario` |
+| `CampoFormulario` | Descritor de campo (rótulo, tipo, validador) |
+
+### Fluxo da GUI
+
+```
+MainFrame (abertura)
+  → JTabbedPane
+    → CrudPanel (entidade)
+      → JTable (dados via DAO)
+      → FormDialog (inserir/editar)
+        → campos validados → DAO → banco
+```
+
+### Dependência
+
+Java Swing pertence ao JDK (`javax.swing.*`) — **zero dependências adicionais** no `pom.xml`.

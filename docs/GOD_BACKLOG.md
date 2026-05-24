@@ -130,7 +130,7 @@ Use como seu diário de bordo pessoal.
 - [x] **P2.3.1** — Must have: CRUD Aeronave, CRUD Cia Aérea, CRUD Aeroporto, CRUD Passageiro, CRUD Voo, Reserva
 - [x] **P2.3.2** — Should have: busca por ID, filtros, validação de dados
 - [x] **P2.3.3** — Could have: relatórios, histórico de reservas por passageiro
-- [x] **P2.3.4** — Won't have: interface gráfica complexa, autenticação de usuário
+- [x] **P2.3.4** — Won't have: autenticação de usuário
 
 ### 2.4 Definir o MVP (Mínimo Produto Viável)
 
@@ -315,6 +315,32 @@ Use como seu diário de bordo pessoal.
 - [x] **SE-06** — Registrar impedimentos e aprendizados
 
 **DoD da Sprint:** Projeto importável e executável no Eclipse Windows.
+
+---
+
+### SPRINT F — Interface Gráfica (Swing)
+
+**Duração:** — | **Início:** — | **Fim:** —
+
+**Objetivo:** Substituir o menu textual por uma interface gráfica Swing com abas e tabelas.
+
+**Backlog da Sprint:**
+- [x] **SF-01** — Criar `gui/CampoFormulario.java` (descritor de campo com validação)
+- [x] **SF-02** — Criar `gui/FormDialog.java` (formulário modal dinâmico)
+- [x] **SF-03** — Criar `gui/CrudPanel.java` (JTable + CRUD reutilizável)
+- [x] **SF-04** — Criar `gui/MainFrame.java` (JFrame principal com abas)
+- [x] **SF-05** — Implementar aba Aeronaves (CRUD via formulário)
+- [x] **SF-06** — Implementar aba Companhias (CRUD via formulário)
+- [x] **SF-07** — Implementar aba Aeroportos (CRUD via formulário)
+- [x] **SF-08** — Implementar aba Passageiros (CRUD via formulário)
+- [x] **SF-09** — Implementar aba Voos (CRUD via formulário)
+- [x] **SF-10** — Implementar aba Vínculo Aeronave-Cia
+- [x] **SF-11** — Implementar aba Reservas (CRUD + verificação assento)
+- [x] **SF-12** — Adicionar `findAll()` em `AeronaveCiaDAO` e `ReservaDAO`
+- [x] **SF-13** — Compilar + testar fluxo completo via GUI
+- [x] **SF-14** — Atualizar documentação
+
+**DoD da Sprint:** Sistema operacional via interface gráfica Swing.
 
 ---
 

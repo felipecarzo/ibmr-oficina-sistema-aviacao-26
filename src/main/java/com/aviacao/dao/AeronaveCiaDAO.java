@@ -9,6 +9,19 @@ import java.util.List;
 public class AeronaveCiaDAO {
     private final ConnectionFactory cf = ConnectionFactory.getInstance();
 
+    public List<AeronaveCia> findAll() {
+        String sql = "SELECT * FROM aeronave_cia ORDER BY id_aeronave, id_cia";
+        List<AeronaveCia> list = new ArrayList<>();
+        try (Connection conn = cf.getConnection();
+             PreparedStatement stmt = conn.prepareStatement(sql);
+             ResultSet rs = stmt.executeQuery()) {
+            while (rs.next()) list.add(mapper(rs));
+        } catch (SQLException e) {
+            System.err.println("Erro ao listar vinculos: " + e.getMessage());
+        }
+        return list;
+    }
+
     public AeronaveCia findById(int idAeronave, int idCia) {
         String sql = "SELECT * FROM aeronave_cia WHERE id_aeronave = ? AND id_cia = ?";
         try (Connection conn = cf.getConnection();

@@ -80,6 +80,7 @@
         <artifactId>exec-maven-plugin</artifactId>
         <version>3.6.3</version>
         <configuration>
+          <mainClass>com.aviacao.gui.MainFrame</mainClass>
           <systemProperties>
             <systemProperty>
               <key>file.encoding</key>

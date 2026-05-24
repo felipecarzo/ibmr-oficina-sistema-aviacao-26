@@ -38,24 +38,25 @@ Gestão de voos, vínculo aeronave-companhia e reserva de assentos.
 
 | ID | Como um... | Eu quero... | Para que... | Prioridade | Est. |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| US-01 | Administrador | cadastrar aeronaves com modelo, capacidade e fabricante | o sistema tenha registro de todas as aeronaves disponíveis | Must | M |
-| US-02 | Administrador | consultar a frota de aeronaves cadastradas | eu possa visualizar rapidamente os dados de cada aeronave | Must | P |
-| US-03 | Administrador | atualizar dados de uma aeronave existente | corrigir informações desatualizadas | Should | P |
-| US-04 | Administrador | desativar uma aeronave sem excluí-la | manter o histórico sem permitir novos uso | Should | P |
-| US-05 | Administrador | cadastrar companhias aéreas | o sistema reconheça as empresas operantes | Must | M |
-| US-06 | Administrador | cadastrar aeroportos com nome, sigla e cidade | os voos tenham origens e destinos válidos | Must | M |
-| US-07 | Administrador | cadastrar passageiros | o sistema tenha a base de clientes | Must | M |
+| US-01 | Administrador | usar uma interface gráfica para gerenciar o sistema | a operação seja intuitiva e visual | Must | M |
+| US-02 | Administrador | cadastrar aeronaves com modelo, capacidade e fabricante | o sistema tenha registro de todas as aeronaves disponíveis | Must | M |
+| US-03 | Administrador | consultar a frota de aeronaves cadastradas | eu possa visualizar rapidamente os dados de cada aeronave | Must | P |
+| US-04 | Administrador | atualizar dados de uma aeronave existente | corrigir informações desatualizadas | Should | P |
+| US-05 | Administrador | desativar uma aeronave sem excluí-la | manter o histórico sem permitir novos uso | Should | P |
+| US-06 | Administrador | cadastrar companhias aéreas | o sistema reconheça as empresas operantes | Must | M |
+| US-07 | Administrador | cadastrar aeroportos com nome, sigla e cidade | os voos tenham origens e destinos válidos | Must | M |
+| US-08 | Administrador | cadastrar passageiros | o sistema tenha a base de clientes | Must | M |
 
 ### Épico 2 — Operações de Voo e Reserva
 
 | ID | Como um... | Eu quero... | Para que... | Prioridade | Est. |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| US-08 | Administrador | cadastrar voos com horários e aeroporto de partida | a grade de voos esteja disponível no sistema | Must | G |
-| US-09 | Administrador | consultar voos por origem ou destino | eu possa filtrar rotas rapidamente | Should | M |
-| US-10 | Atendente | vincular uma aeronave a uma companhia | cada aeronave tenha uma operadora responsável | Must | M |
-| US-11 | Atendente | efetuar uma reserva para um passageiro em um voo | o passageiro tenha seu assento garantido | Must | G |
-| US-12 | Atendente | cancelar uma reserva | liberar o assento caso o passageiro desista | Should | M |
-| US-13 | Atendente | visualizar assentos disponíveis em um voo | oferecer opções ao passageiro durante a reserva | Could | P |
+| US-09 | Administrador | cadastrar voos com horários e aeroporto de partida | a grade de voos esteja disponível no sistema | Must | G |
+| US-10 | Administrador | consultar voos por origem ou destino | eu possa filtrar rotas rapidamente | Should | M |
+| US-11 | Atendente | vincular uma aeronave a uma companhia | cada aeronave tenha uma operadora responsável | Must | M |
+| US-12 | Atendente | efetuar uma reserva para um passageiro em um voo | o passageiro tenha seu assento garantido | Must | G |
+| US-13 | Atendente | cancelar uma reserva | liberar o assento caso o passageiro desista | Should | M |
+| US-14 | Atendente | visualizar assentos disponíveis em um voo | oferecer opções ao passageiro durante a reserva | Could | P |
 
 **Estimativa:** P = Pequena (≤2h), M = Média (2-4h), G = Grande (4-8h)
 
@@ -65,14 +66,14 @@ Gestão de voos, vínculo aeronave-companhia e reserva de assentos.
 
 | Caso de Uso | User Stories | Modelo | DAO |
 | :--- | :--- | :--- | :--- |
-| UC-01 — Gerenciar Aeronaves | US-01, US-02, US-03, US-04 | `Aeronave` | `AeronaveDAO` |
-| UC-02 — Gerenciar Cias Aéreas | US-05 | `CiaAerea` | `CiaAereaDAO` |
-| UC-03 — Gerenciar Aeroportos | US-06 | `Aeroporto` | `AeroportoDAO` |
-| UC-04 — Gerenciar Passageiros | US-07 | `Passageiro` | `PassageiroDAO` |
-| UC-05 — Gerenciar Voos | US-08, US-09 | `Voo` | `VooDAO` |
-| UC-06 — Vincular Aeronave a Cia | US-10 | `AeronaveCia` | `AeronaveCiaDAO` |
-| UC-07 — Efetuar Reserva | US-11, US-13 | `Reserva` | `ReservaDAO` |
-| UC-08 — Cancelar Reserva | US-12 | `Reserva` | `ReservaDAO` |
+| UC-01 — Gerenciar Aeronaves | US-01, US-02, US-03, US-04, US-05 | `Aeronave` | `AeronaveDAO` |
+| UC-02 — Gerenciar Cias Aéreas | US-06 | `CiaAerea` | `CiaAereaDAO` |
+| UC-03 — Gerenciar Aeroportos | US-07 | `Aeroporto` | `AeroportoDAO` |
+| UC-04 — Gerenciar Passageiros | US-08 | `Passageiro` | `PassageiroDAO` |
+| UC-05 — Gerenciar Voos | US-09, US-10 | `Voo` | `VooDAO` |
+| UC-06 — Vincular Aeronave a Cia | US-11 | `AeronaveCia` | `AeronaveCiaDAO` |
+| UC-07 — Efetuar Reserva | US-12, US-14 | `Reserva` | `ReservaDAO` |
+| UC-08 — Cancelar Reserva | US-13 | `Reserva` | `ReservaDAO` |
 
 ---
 

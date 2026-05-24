@@ -27,12 +27,12 @@
 ## Executar
 
 ### Pelo Eclipse
-- Abrir `src/main/java/com/aviacao/main/SistemaAviação.java`
+- Navegar até `src/main/java/com/aviacao/gui/MainFrame.java`
 - Botão direito → **Run As → Java Application**
 
 ### Pelo Terminal (CMD/PowerShell)
 ```bash
-mvn clean compile exec:java -Dexec.mainClass="com.aviacao.main.SistemaAviação"
+mvn clean compile exec:java
 ```
 
 ## Observações

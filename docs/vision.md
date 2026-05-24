@@ -28,6 +28,7 @@ Projeto desenvolvido no âmbito da **Oficina de Integração de Software** da fa
 | :--- | :--- |
 | Linguagem | Java (versão 17+) |
 | Build | Apache Maven (`pom.xml`) |
+| Interface | Java Swing (GUI) |
 | Conectividade | JDBC com `mysql-connector-j` |
 | SGBD | MariaDB 10.4.22 (XAMPP) |
 | Admin DB | phpMyAdmin |
@@ -50,11 +51,11 @@ O desenvolvimento doméstico usa Linux (XAMPP/MariaDB) e a apresentação será 
 
 Nenhuma funcionalidade é considerada concluída sem cumprir **todos** os critérios abaixo:
 
-- [ ] **Persistência Real:** Toda operação reflete imediatamente no banco (sem dados em memória)
-- [ ] **Fail-Safe:** Exceções SQL (FK violada, duplicidade) são capturadas com mensagens amigáveis — o sistema nunca "quebra"
-- [ ] **Recursos Fechados:** Toda conexão JDBC usa `try-with-resources` ou blocos `finally`
-- [ ] **Compilação Limpa:** `mvn clean compile` sem erros
-- [ ] **Portabilidade Windows:** Roda ao importar no Eclipse sem adaptações
+- [x] **Persistência Real:** Toda operação reflete imediatamente no banco (sem dados em memória)
+- [x] **Fail-Safe:** Exceções SQL (FK violada, duplicidade) são capturadas com mensagens amigáveis — o sistema nunca "quebra"
+- [x] **Recursos Fechados:** Toda conexão JDBC usa `try-with-resources` ou blocos `finally`
+- [x] **Compilação Limpa:** `mvn clean compile` sem erros
+- [x] **Portabilidade Windows:** Roda ao importar no Eclipse sem adaptações
 
 ---
 

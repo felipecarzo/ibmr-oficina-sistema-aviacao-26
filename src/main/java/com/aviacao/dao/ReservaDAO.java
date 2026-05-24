@@ -9,6 +9,19 @@ import java.util.List;
 public class ReservaDAO {
     private final ConnectionFactory cf = ConnectionFactory.getInstance();
 
+    public List<Reserva> findAll() {
+        String sql = "SELECT * FROM reserva ORDER BY cod_reserva";
+        List<Reserva> list = new ArrayList<>();
+        try (Connection conn = cf.getConnection();
+             PreparedStatement stmt = conn.prepareStatement(sql);
+             ResultSet rs = stmt.executeQuery()) {
+            while (rs.next()) list.add(mapper(rs));
+        } catch (SQLException e) {
+            System.err.println("Erro ao listar reservas: " + e.getMessage());
+        }
+        return list;
+    }
+
     public Reserva findById(String codReserva) {
         String sql = "SELECT * FROM reserva WHERE cod_reserva = ?";
         try (Connection conn = cf.getConnection();

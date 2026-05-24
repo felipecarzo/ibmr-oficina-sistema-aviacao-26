@@ -3,11 +3,14 @@
 /home/felipe/Projetos/Estudo/proj_sistemaAviacao/src/main/java/com/aviacao/model/Aeroporto.java
 /home/felipe/Projetos/Estudo/proj_sistemaAviacao/src/main/java/com/aviacao/dao/ConnectionFactory.java
 /home/felipe/Projetos/Estudo/proj_sistemaAviacao/src/main/java/com/aviacao/dao/PassageiroDAO.java
+/home/felipe/Projetos/Estudo/proj_sistemaAviacao/src/main/java/com/aviacao/gui/CampoFormulario.java
 /home/felipe/Projetos/Estudo/proj_sistemaAviacao/src/main/java/com/aviacao/main/SistemaAviação.java
 /home/felipe/Projetos/Estudo/proj_sistemaAviacao/src/main/java/com/aviacao/dao/CiaAereaDAO.java
+/home/felipe/Projetos/Estudo/proj_sistemaAviacao/src/main/java/com/aviacao/gui/FormDialog.java
 /home/felipe/Projetos/Estudo/proj_sistemaAviacao/src/main/java/com/aviacao/model/Aeronave.java
 /home/felipe/Projetos/Estudo/proj_sistemaAviacao/src/main/java/com/aviacao/dao/VooDAO.java
 /home/felipe/Projetos/Estudo/proj_sistemaAviacao/src/main/java/com/aviacao/dao/AeroportoDAO.java
+/home/felipe/Projetos/Estudo/proj_sistemaAviacao/src/main/java/com/aviacao/gui/MainFrame.java
 /home/felipe/Projetos/Estudo/proj_sistemaAviacao/src/main/java/com/aviacao/model/CiaAerea.java
 /home/felipe/Projetos/Estudo/proj_sistemaAviacao/src/main/java/com/aviacao/service/Validador.java
 /home/felipe/Projetos/Estudo/proj_sistemaAviacao/src/main/java/com/aviacao/dao/AeronaveDAO.java
@@ -15,3 +18,4 @@
 /home/felipe/Projetos/Estudo/proj_sistemaAviacao/src/main/java/com/aviacao/model/Reserva.java
 /home/felipe/Projetos/Estudo/proj_sistemaAviacao/src/main/java/com/aviacao/model/Passageiro.java
 /home/felipe/Projetos/Estudo/proj_sistemaAviacao/src/main/java/com/aviacao/model/Voo.java
+/home/felipe/Projetos/Estudo/proj_sistemaAviacao/src/main/java/com/aviacao/gui/CrudPanel.java
