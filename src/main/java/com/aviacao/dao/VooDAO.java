@@ -51,7 +51,7 @@ public class VooDAO {
         return list;
     }
 
-    public void insert(Voo v) {
+    public boolean insert(Voo v) {
         String sql = "INSERT INTO voo (cod_voo, hora_partida, hora_chegada, cod_aeroporto, cidade_origem, cidade_destino) VALUES (?, ?, ?, ?, ?, ?)";
         try (Connection conn = cf.getConnection();
              PreparedStatement stmt = conn.prepareStatement(sql)) {
@@ -62,12 +62,14 @@ public class VooDAO {
             stmt.setString(5, v.getCidadeOrigem());
             stmt.setString(6, v.getCidadeDestino());
             stmt.executeUpdate();
+            return true;
         } catch (SQLException e) {
             System.err.println("Erro ao inserir voo: " + e.getMessage());
+            return false;
         }
     }
 
-    public void update(Voo v) {
+    public boolean update(Voo v) {
         String sql = "UPDATE voo SET hora_partida=?, hora_chegada=?, cod_aeroporto=?, cidade_origem=?, cidade_destino=? WHERE cod_voo=?";
         try (Connection conn = cf.getConnection();
              PreparedStatement stmt = conn.prepareStatement(sql)) {
@@ -78,19 +80,23 @@ public class VooDAO {
             stmt.setString(5, v.getCidadeDestino());
             stmt.setString(6, v.getCodVoo());
             stmt.executeUpdate();
+            return true;
         } catch (SQLException e) {
             System.err.println("Erro ao atualizar voo: " + e.getMessage());
+            return false;
         }
     }
 
-    public void delete(String codVoo) {
+    public boolean delete(String codVoo) {
         String sql = "DELETE FROM voo WHERE cod_voo = ?";
         try (Connection conn = cf.getConnection();
              PreparedStatement stmt = conn.prepareStatement(sql)) {
             stmt.setString(1, codVoo);
             stmt.executeUpdate();
+            return true;
         } catch (SQLException e) {
             System.err.println("Erro ao excluir voo: " + e.getMessage());
+            return false;
         }
     }
 

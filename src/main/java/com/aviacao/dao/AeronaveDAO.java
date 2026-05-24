@@ -50,7 +50,7 @@ public class AeronaveDAO {
         return list;
     }
 
-    public void insert(Aeronave a) {
+    public boolean insert(Aeronave a) {
         String sql = "INSERT INTO aeronave (modelo, capacidade, envergadura, fabricante, status_ativo) VALUES (?, ?, ?, ?, ?)";
         try (Connection conn = cf.getConnection();
              PreparedStatement stmt = conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS)) {
@@ -63,12 +63,14 @@ public class AeronaveDAO {
             try (ResultSet keys = stmt.getGeneratedKeys()) {
                 if (keys.next()) a.setIdAeronave(keys.getInt(1));
             }
+            return true;
         } catch (SQLException e) {
             System.err.println("Erro ao inserir aeronave: " + e.getMessage());
+            return false;
         }
     }
 
-    public void update(Aeronave a) {
+    public boolean update(Aeronave a) {
         String sql = "UPDATE aeronave SET modelo=?, capacidade=?, envergadura=?, fabricante=?, status_ativo=? WHERE id_aeronave=?";
         try (Connection conn = cf.getConnection();
              PreparedStatement stmt = conn.prepareStatement(sql)) {
@@ -79,19 +81,23 @@ public class AeronaveDAO {
             stmt.setString(5, String.valueOf(a.getStatusAtivo()));
             stmt.setInt(6, a.getIdAeronave());
             stmt.executeUpdate();
+            return true;
         } catch (SQLException e) {
             System.err.println("Erro ao atualizar aeronave: " + e.getMessage());
+            return false;
         }
     }
 
-    public void delete(int id) {
+    public boolean delete(int id) {
         String sql = "DELETE FROM aeronave WHERE id_aeronave = ?";
         try (Connection conn = cf.getConnection();
              PreparedStatement stmt = conn.prepareStatement(sql)) {
             stmt.setInt(1, id);
             stmt.executeUpdate();
+            return true;
         } catch (SQLException e) {
             System.err.println("Erro ao excluir aeronave: " + e.getMessage());
+            return false;
         }
     }
 

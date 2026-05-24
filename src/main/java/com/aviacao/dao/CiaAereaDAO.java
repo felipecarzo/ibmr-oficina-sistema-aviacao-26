@@ -35,7 +35,7 @@ public class CiaAereaDAO {
         return list;
     }
 
-    public void insert(CiaAerea c) {
+    public boolean insert(CiaAerea c) {
         String sql = "INSERT INTO cia_aerea (nome, cnpj, email, status_ativo) VALUES (?, ?, ?, ?)";
         try (Connection conn = cf.getConnection();
              PreparedStatement stmt = conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS)) {
@@ -47,12 +47,14 @@ public class CiaAereaDAO {
             try (ResultSet keys = stmt.getGeneratedKeys()) {
                 if (keys.next()) c.setIdCia(keys.getInt(1));
             }
+            return true;
         } catch (SQLException e) {
             System.err.println("Erro ao inserir cia: " + e.getMessage());
+            return false;
         }
     }
 
-    public void update(CiaAerea c) {
+    public boolean update(CiaAerea c) {
         String sql = "UPDATE cia_aerea SET nome=?, cnpj=?, email=?, status_ativo=? WHERE id_cia=?";
         try (Connection conn = cf.getConnection();
              PreparedStatement stmt = conn.prepareStatement(sql)) {
@@ -62,19 +64,23 @@ public class CiaAereaDAO {
             stmt.setString(4, String.valueOf(c.getStatusAtivo()));
             stmt.setInt(5, c.getIdCia());
             stmt.executeUpdate();
+            return true;
         } catch (SQLException e) {
             System.err.println("Erro ao atualizar cia: " + e.getMessage());
+            return false;
         }
     }
 
-    public void delete(int id) {
+    public boolean delete(int id) {
         String sql = "DELETE FROM cia_aerea WHERE id_cia = ?";
         try (Connection conn = cf.getConnection();
              PreparedStatement stmt = conn.prepareStatement(sql)) {
             stmt.setInt(1, id);
             stmt.executeUpdate();
+            return true;
         } catch (SQLException e) {
             System.err.println("Erro ao excluir cia: " + e.getMessage());
+            return false;
         }
     }
 

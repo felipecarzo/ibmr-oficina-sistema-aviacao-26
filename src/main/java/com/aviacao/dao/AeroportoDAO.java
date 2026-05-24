@@ -35,7 +35,7 @@ public class AeroportoDAO {
         return list;
     }
 
-    public void insert(Aeroporto a) {
+    public boolean insert(Aeroporto a) {
         String sql = "INSERT INTO aeroporto (nome, sigla, cidade) VALUES (?, ?, ?)";
         try (Connection conn = cf.getConnection();
              PreparedStatement stmt = conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS)) {
@@ -46,12 +46,14 @@ public class AeroportoDAO {
             try (ResultSet keys = stmt.getGeneratedKeys()) {
                 if (keys.next()) a.setCodAeroporto(keys.getInt(1));
             }
+            return true;
         } catch (SQLException e) {
             System.err.println("Erro ao inserir aeroporto: " + e.getMessage());
+            return false;
         }
     }
 
-    public void update(Aeroporto a) {
+    public boolean update(Aeroporto a) {
         String sql = "UPDATE aeroporto SET nome=?, sigla=?, cidade=? WHERE cod_aeroporto=?";
         try (Connection conn = cf.getConnection();
              PreparedStatement stmt = conn.prepareStatement(sql)) {
@@ -60,19 +62,23 @@ public class AeroportoDAO {
             stmt.setString(3, a.getCidade());
             stmt.setInt(4, a.getCodAeroporto());
             stmt.executeUpdate();
+            return true;
         } catch (SQLException e) {
             System.err.println("Erro ao atualizar aeroporto: " + e.getMessage());
+            return false;
         }
     }
 
-    public void delete(int id) {
+    public boolean delete(int id) {
         String sql = "DELETE FROM aeroporto WHERE cod_aeroporto = ?";
         try (Connection conn = cf.getConnection();
              PreparedStatement stmt = conn.prepareStatement(sql)) {
             stmt.setInt(1, id);
             stmt.executeUpdate();
+            return true;
         } catch (SQLException e) {
             System.err.println("Erro ao excluir aeroporto: " + e.getMessage());
+            return false;
         }
     }
 

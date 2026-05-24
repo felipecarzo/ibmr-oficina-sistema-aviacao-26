@@ -51,7 +51,7 @@ public class CrudPanel extends JPanel {
         add(new JScrollPane(tabela), BorderLayout.CENTER);
 
         btnAtualizar.addActionListener(e -> carregarDados());
-        btnCadastrar.addActionListener(e -> acaoCadastrar.run());
+        btnCadastrar.addActionListener(e -> { acaoCadastrar.run(); carregarDados(); });
         btnBuscar.addActionListener(e -> buscarPorId());
         btnEditar.addActionListener(e -> editarSelecionado());
         btnExcluir.addActionListener(e -> excluirSelecionado());

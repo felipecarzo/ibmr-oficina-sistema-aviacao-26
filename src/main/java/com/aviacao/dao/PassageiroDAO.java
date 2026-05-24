@@ -35,7 +35,7 @@ public class PassageiroDAO {
         return list;
     }
 
-    public void insert(Passageiro p) {
+    public boolean insert(Passageiro p) {
         String sql = "INSERT INTO passageiro (nome, email, tel, dt_nasc) VALUES (?, ?, ?, ?)";
         try (Connection conn = cf.getConnection();
              PreparedStatement stmt = conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS)) {
@@ -47,12 +47,14 @@ public class PassageiroDAO {
             try (ResultSet keys = stmt.getGeneratedKeys()) {
                 if (keys.next()) p.setIdPassageiro(keys.getInt(1));
             }
+            return true;
         } catch (SQLException e) {
             System.err.println("Erro ao inserir passageiro: " + e.getMessage());
+            return false;
         }
     }
 
-    public void update(Passageiro p) {
+    public boolean update(Passageiro p) {
         String sql = "UPDATE passageiro SET nome=?, email=?, tel=?, dt_nasc=? WHERE id_passageiro=?";
         try (Connection conn = cf.getConnection();
              PreparedStatement stmt = conn.prepareStatement(sql)) {
@@ -62,19 +64,23 @@ public class PassageiroDAO {
             stmt.setDate(4, Date.valueOf(p.getDtNasc()));
             stmt.setInt(5, p.getIdPassageiro());
             stmt.executeUpdate();
+            return true;
         } catch (SQLException e) {
             System.err.println("Erro ao atualizar passageiro: " + e.getMessage());
+            return false;
         }
     }
 
-    public void delete(int id) {
+    public boolean delete(int id) {
         String sql = "DELETE FROM passageiro WHERE id_passageiro = ?";
         try (Connection conn = cf.getConnection();
              PreparedStatement stmt = conn.prepareStatement(sql)) {
             stmt.setInt(1, id);
             stmt.executeUpdate();
+            return true;
         } catch (SQLException e) {
             System.err.println("Erro ao excluir passageiro: " + e.getMessage());
+            return false;
         }
     }
 

@@ -81,7 +81,7 @@ public class ReservaDAO {
         return false;
     }
 
-    public void insert(Reserva r) {
+    public boolean insert(Reserva r) {
         String sql = "INSERT INTO reserva (cod_reserva, id_passageiro, cod_voo, assento, dt_reserva) VALUES (?, ?, ?, ?, ?)";
         try (Connection conn = cf.getConnection();
              PreparedStatement stmt = conn.prepareStatement(sql)) {
@@ -91,19 +91,23 @@ public class ReservaDAO {
             stmt.setString(4, r.getAssento());
             stmt.setDate(5, Date.valueOf(r.getDtReserva() != null ? r.getDtReserva() : LocalDate.now()));
             stmt.executeUpdate();
+            return true;
         } catch (SQLException e) {
             System.err.println("Erro ao inserir reserva: " + e.getMessage());
+            return false;
         }
     }
 
-    public void delete(String codReserva) {
+    public boolean delete(String codReserva) {
         String sql = "DELETE FROM reserva WHERE cod_reserva = ?";
         try (Connection conn = cf.getConnection();
              PreparedStatement stmt = conn.prepareStatement(sql)) {
             stmt.setString(1, codReserva);
             stmt.executeUpdate();
+            return true;
         } catch (SQLException e) {
             System.err.println("Erro ao excluir reserva: " + e.getMessage());
+            return false;
         }
     }
 

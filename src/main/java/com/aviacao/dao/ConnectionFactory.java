@@ -39,7 +39,13 @@ public class ConnectionFactory {
     }
 
     public Connection getConnection() throws SQLException {
-        return DriverManager.getConnection(url, user, password);
+        try {
+            return DriverManager.getConnection(url, user, password);
+        } catch (SQLException e) {
+            throw new SQLException("Não foi possível conectar ao banco.\n" +
+                    "Verifique se o XAMPP/MySQL está rodando em localhost:3306\n" +
+                    "Detalhe técnico: " + e.getMessage());
+        }
     }
 
     public void close(Connection conn) {

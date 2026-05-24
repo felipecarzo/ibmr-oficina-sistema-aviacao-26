@@ -67,7 +67,7 @@ public class AeronaveCiaDAO {
         return list;
     }
 
-    public void insert(AeronaveCia ac) {
+    public boolean insert(AeronaveCia ac) {
         String sql = "INSERT INTO aeronave_cia (id_aeronave, id_cia, data_aquisicao) VALUES (?, ?, ?)";
         try (Connection conn = cf.getConnection();
              PreparedStatement stmt = conn.prepareStatement(sql)) {
@@ -75,20 +75,24 @@ public class AeronaveCiaDAO {
             stmt.setInt(2, ac.getIdCia());
             stmt.setDate(3, Date.valueOf(ac.getDataAquisicao()));
             stmt.executeUpdate();
+            return true;
         } catch (SQLException e) {
             System.err.println("Erro ao inserir vinculo: " + e.getMessage());
+            return false;
         }
     }
 
-    public void delete(int idAeronave, int idCia) {
+    public boolean delete(int idAeronave, int idCia) {
         String sql = "DELETE FROM aeronave_cia WHERE id_aeronave = ? AND id_cia = ?";
         try (Connection conn = cf.getConnection();
              PreparedStatement stmt = conn.prepareStatement(sql)) {
             stmt.setInt(1, idAeronave);
             stmt.setInt(2, idCia);
             stmt.executeUpdate();
+            return true;
         } catch (SQLException e) {
             System.err.println("Erro ao excluir vinculo: " + e.getMessage());
+            return false;
         }
     }
 
