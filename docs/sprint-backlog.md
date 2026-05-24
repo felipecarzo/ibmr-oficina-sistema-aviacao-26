@@ -1,24 +1,27 @@
 # Sprint Backlog
 
-## Sprint D — Interface (Menu) ✅
-
-**Arquivo:** `src/main/java/com/aviacao/main/SistemaAviação.java`
+## Sprint E — Portabilidade e Polimento ✅
 
 **Status:** ✅ Concluída
 
-| Funcionalidade | Status |
+| Item | Entregue |
 | :--- | :---: |
-| Menu principal com navegação | ✅ |
-| Submenu Aeronaves (CRUD) | ✅ |
-| Submenu Companhias (CRUD) | ✅ |
-| Submenu Aeroportos (CRUD) | ✅ |
-| Submenu Passageiros (CRUD) | ✅ |
-| Submenu Voos (CRUD + rota) | ✅ |
-| Vincular Aeronave a Companhia | ✅ |
-| Efetuar Reserva (c/ validação assento) | ✅ |
-| Cancelar Reserva | ✅ |
-| Validações integradas | ✅ |
-| Tratamento de exceções | ✅ |
-| `mvn clean compile` | ✅ |
+| Encoding UTF-8 configurado | `pom.xml` + `exec-maven-plugin` |
+| Resource loading via classpath | `ConnectionFactory.java` (cross-platform) |
+| ZIP para Eclipse | `sistema-aviacao.zip` (2.3 MB) |
+| Instruções de setup Windows | `SETUP_WINDOWS.md` |
+| `mvn clean compile` | BUILD SUCCESS |
 
-## Próximo: Sprint E — Portabilidade e Polimento
+## Conclusão do MVP
+
+Todas as sprints planejadas foram concluídas:
+
+| Sprint | Foco | Status |
+| :--- | :--- | :---: |
+| Sprint 0 | Inception (docs + diagramas) | ✅ |
+| Sprint A | Infraestrutura (Maven + ConnectionFactory) | ✅ |
+| Sprint B | POJOs + DAOs (Passageiro, Aeroporto, CiaAerea) | ✅ |
+| Sprint C | POJOs + DAOs (Aeronave, AeronaveCia, Voo, Reserva) | ✅ |
+| Fase 5.4 | Service (Validador) | ✅ |
+| Sprint D | Interface (Menu console) | ✅ |
+| Sprint E | Portabilidade (Windows/Eclipse) | ✅ |

@@ -307,12 +307,12 @@ Use como seu diário de bordo pessoal.
 **Objetivo:** Garantir que o sistema rode no Windows da faculdade sem adaptações.
 
 **Backlog da Sprint:**
-- [ ] **SE-01** — Verificar encoding (acentos no console Windows)
-- [ ] **SE-02** — Testar `mvn clean compile` no Eclipse
-- [ ] **SE-03** — Verificar caminhos de recursos (`db.properties` via classpath)
-- [ ] **SE-04** — Exportar projeto como ZIP para importação no Eclipse
-- [ ] **SE-05** — Registrar instruções de setup para Windows
-- [ ] **SE-06** — Registrar impedimentos e aprendizados
+- [x] **SE-01** — Verificar encoding (acentos no console Windows)
+- [x] **SE-02** — Testar `mvn clean compile` no Eclipse
+- [x] **SE-03** — Verificar caminhos de recursos (`db.properties` via classpath)
+- [x] **SE-04** — Exportar projeto como ZIP para importação no Eclipse
+- [x] **SE-05** — Registrar instruções de setup para Windows
+- [x] **SE-06** — Registrar impedimentos e aprendizados
 
 **DoD da Sprint:** Projeto importável e executável no Eclipse Windows.
 
