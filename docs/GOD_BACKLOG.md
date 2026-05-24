@@ -217,14 +217,14 @@ Use como seu diário de bordo pessoal.
 **Objetivo:** Estabelecer a infraestrutura do projeto Java com Maven e a camada de conexão com o banco MariaDB.
 
 **Backlog da Sprint:**
-- [ ] **SA-01** — Criar projeto Maven (archetype)
-- [ ] **SA-02** — Configurar `pom.xml` com dependência `mysql-connector-j`
-- [ ] **SA-03** — Criar estrutura de pacotes (model, dao, service, main)
-- [ ] **SA-04** — Criar `db.properties` com credenciais
-- [ ] **SA-05** — Implementar `ConnectionFactory` (Singleton)
-- [ ] **SA-06** — Testar conexão com o banco
-- [ ] **SA-07** — `mvn clean compile` sem erros
-- [ ] **SA-08** — Registrar impedimentos e aprendizados
+- [x] **SA-01** — Criar projeto Maven (archetype)
+- [x] **SA-02** — Configurar `pom.xml` com dependência `mysql-connector-j`
+- [x] **SA-03** — Criar estrutura de pacotes (model, dao, service, main)
+- [x] **SA-04** — Criar `db.properties` com credenciais
+- [x] **SA-05** — Implementar `ConnectionFactory` (Singleton)
+- [x] **SA-06** — Testar conexão com o banco
+- [x] **SA-07** — `mvn clean compile` sem erros
+- [x] **SA-08** — Registrar impedimentos e aprendizados
 
 **DoD da Sprint:** Projeto compila, conexão com banco funciona.
 
@@ -324,35 +324,25 @@ Use como seu diário de bordo pessoal.
 
 ### Fase 5.0 — Setup do Projeto
 
-- [ ] **5.0.1** — Criar projeto Maven
-  ```
-  mvn archetype:generate -DgroupId=com.aviacao -DartifactId=sistema-aviacao \
-    -DarchetypeArtifactId=maven-archetype-quickstart \
-    -DarchetypeVersion=1.4 -DinteractiveMode=false
-  ```
-- [ ] **5.0.2** — Adicionar `mysql-connector-j` no `pom.xml`
-- [ ] **5.0.3** — Alterar `maven.compiler.source` e `target` para a versão do JDK
-- [ ] **5.0.4** — Criar pacotes: `model`, `dao`, `service`, `main`
-- [ ] **5.0.5** — Criar `src/main/resources/db.properties`
-  ```properties
-  db.url=jdbc:mariadb://localhost:3306/sistema_aviacao?useSSL=false
-  db.user=root
-  db.password=
-  ```
-- [ ] **5.0.6** — Verificar MariaDB rodando e banco criado
-- [ ] **5.0.7** — `mvn clean compile` → 0 erros
+- [x] **5.0.1** — Criar projeto Maven
+- [x] **5.0.2** — Adicionar `mysql-connector-j` no `pom.xml`
+- [x] **5.0.3** — Alterar `maven.compiler.source` e `target` para 17
+- [x] **5.0.4** — Criar pacotes: `model`, `dao`, `service`, `main`
+- [x] **5.0.5** — Criar `src/main/resources/db.properties`
+- [x] **5.0.6** — Verificar MariaDB rodando e banco criado
+- [x] **5.0.7** — `mvn clean compile` → 0 erros
 
 ### Fase 5.1 — ConnectionFactory
 
 **Arquivo:** `src/main/java/com/aviacao/dao/ConnectionFactory.java`
 
-- [ ] **5.1.1** — Criar atributo `private static ConnectionFactory instance`
-- [ ] **5.1.2** — Criar atributos `url`, `user`, `password` (carregar de `db.properties`)
-- [ ] **5.1.3** — Construtor `private` (carrega properties)
-- [ ] **5.1.4** — `public static ConnectionFactory getInstance()`
-- [ ] **5.1.5** — `public Connection getConnection()` → `DriverManager.getConnection(url, user, password)`
-- [ ] **5.1.6** — `public void close(Connection conn)` e `close(Connection, PreparedStatement, ResultSet)`
-- [ ] **5.1.7** — Criar `TesteConexao.java` temporário → imprimir "Conexão OK"
+- [x] **5.1.1** — Criar atributo `private static ConnectionFactory instance`
+- [x] **5.1.2** — Criar atributos `url`, `user`, `password` (carregar de `db.properties`)
+- [x] **5.1.3** — Construtor `private` (carrega properties)
+- [x] **5.1.4** — `public static ConnectionFactory getInstance()`
+- [x] **5.1.5** — `public Connection getConnection()` → `DriverManager.getConnection(url, user, password)`
+- [x] **5.1.6** — `public void close(Connection conn)` e `close(Connection, PreparedStatement, ResultSet)`
+- [x] **5.1.7** — Criar `TesteConexao.java` temporário → imprimir "Conexão OK"
 
 ### Fase 5.2 — POJOs (Model)
 
